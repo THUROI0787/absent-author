@@ -1,5 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this evidence list or the skills, please cite it as below. Ruoyu Zhao and Zhehao Zou contributed equally; Ruoyu Zhao is the project lead."
+type: software
 title: "Absent Author: Evidence and Skills for Spotting AI-Produced Papers Without a Responsible Human Author"
 authors:
   - family-names: Zhao
@@ -31,4 +32,11 @@ date-released: 2026-10-05
 license: MIT
 repository-code: "https://github.com/THUROI0787/absent-author"
 url: "https://THUROI0787.github.io/absent-author/"
+abstract: >-
+  Absent Author is an evidence list and two agent skills for spotting research papers
+  that AI produced with no responsible human author. The list holds 83 sourced items in
+  four layers (language, structure, research, artifacts) plus signs of a present author.
+  The paper-author-pass skill helps authors check an AI-assisted paper before submission;
+  the paper-slop-screen skill helps reviewers grade writing (W), research steering (R) and
+  quality (Q) with a location and a quote for every finding, and no AI probability.
 keywords: [peer review, AI-generated papers, research integrity, LLM, agent skills]
