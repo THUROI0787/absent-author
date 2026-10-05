@@ -9,7 +9,7 @@
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-5B6675?style=flat" alt="MIT"></a>
 </p>
 
-<p align="center"><b>Ruoyu Zhao</b><sup>1,*,†</sup> · <b>Zhehao Zou</b><sup>2,*</sup> · <b>Jinheng Zhang</b><sup>3</sup> · <b>Yuting Chen</b><sup>4</sup> · <b>Jiaqi Wu</b><sup>1</sup><br><sup>1</sup>City University of Hong Kong · <sup>2</sup>The Chinese University of Hong Kong · <sup>3</sup>University of Pennsylvania · <sup>4</sup>Georgia Institute of Technology<br><sub>* 同等貢献 · † プロジェクトリーダー</sub></p>
+<p align="center"><b>Ruoyu Zhao</b><sup>1,*,†</sup> · <b>Zhehao Zou</b><sup>2,*</sup> · <b>Jinheng Zhang</b><sup>3</sup> · <b>Yuting Chen</b><sup>4</sup> · <b>Jiaqi Wu</b><sup>1</sup> · <b>Chenyu Zhu</b><sup>1</sup><br><sup>1</sup>City University of Hong Kong · <sup>2</sup>The Chinese University of Hong Kong · <sup>3</sup>University of Pennsylvania · <sup>4</sup>Georgia Institute of Technology<br><sub>* 同等貢献 · † プロジェクトリーダー</sub></p>
 
 <p align="center"><a href="README.md">English</a> · <a href="README_CN.md">中文</a> · <b>日本語</b> · <a href="https://THUROI0787.github.io/absent-author/?lang=ja">ウェブサイト</a></p>
 
@@ -98,13 +98,14 @@ lint は単体でも動きます（Python 3.9 以上、依存なし）：`python
 | Jinheng Zhang | University of Pennsylvania | jinhengz@seas.upenn.edu |
 | Yuting Chen | Georgia Institute of Technology | yuting3123@gmail.com |
 | Jiaqi Wu | City University of Hong Kong | 3140610478@qq.com |
+| Chenyu Zhu | City University of Hong Kong | zcy20050413@gmail.com |
 
 Ruoyu Zhao と Zhehao Zou は同等に貢献しました。プロジェクトリーダーは Ruoyu Zhao です。参考にした先行研究・ツールへの謝辞は [README.md](README.md#acknowledgements-and-related-work) にあります。
 
 ```bibtex
 @misc{absentauthor2026,
   title        = {Absent Author: Evidence and Skills for Spotting AI-Produced Papers Without a Responsible Human Author},
-  author       = {Zhao, Ruoyu and Zou, Zhehao and Zhang, Jinheng and Chen, Yuting and Wu, Jiaqi},
+  author       = {Zhao, Ruoyu and Zou, Zhehao and Zhang, Jinheng and Chen, Yuting and Wu, Jiaqi and Zhu, Chenyu},
   note         = {Ruoyu Zhao and Zhehao Zou contributed equally. Project lead: Ruoyu Zhao},
   year         = {2026},
   howpublished = {\url{https://github.com/THUROI0787/absent-author}}

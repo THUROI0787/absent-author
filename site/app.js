@@ -78,7 +78,7 @@
     k1: "提议新证据", k1d: "你反复见到的一种模式，附一个例子，以及人类也会这样写的一种情形。",
     k2: "提交 field report", k2d: "一次已经结束的审稿中的匿名化案例，以及后来发生了什么。",
     k3: "报告误判", k3d: "筛查把一篇人类论文判错了。这类报告最重要。",
-    foot: "© 2026 Ruoyu Zhao, Zhehao Zou, Jinheng Zhang, Yuting Chen, Jiaqi Wu。MIT 许可。建立在许多审稿人、skill 作者和会议主席的工作之上；所有参考见 SOURCES。",
+    foot: "© 2026 Ruoyu Zhao, Zhehao Zou, Jinheng Zhang, Yuting Chen, Jiaqi Wu, Chenyu Zhu。MIT 许可。建立在许多审稿人、skill 作者和会议主席的工作之上；所有参考见 SOURCES。",
     au_h: "作者", au_note: "* 共同一作 · † 项目负责人",
     v_h: "接下来会怎样。",
     v_p: "我们公开这份清单时就清楚：会有人用它来掩盖作者的缺席，而这正是清单要找的东西。",
@@ -169,7 +169,7 @@
     k1: "証拠を提案する", k1d: "繰り返し目にするパターンを、例と、人間がそれを書いてしまう場合の一例とともに。",
     k2: "フィールドレポートを送る", k2d: "終わった査読からの匿名化した事例と、その後どうなったか。",
     k3: "誤判定を報告する", k3d: "スクリーニングが人間の論文に印を付けてしまった。こうした報告がいちばん重要です。",
-    foot: "© 2026 Ruoyu Zhao, Zhehao Zou, Jinheng Zhang, Yuting Chen, Jiaqi Wu。MIT ライセンス。多くの査読者、スキル作者、会議のチェアの仕事の上に成り立っています。すべての参考文献は SOURCES にあります。",
+    foot: "© 2026 Ruoyu Zhao, Zhehao Zou, Jinheng Zhang, Yuting Chen, Jiaqi Wu, Chenyu Zhu。MIT ライセンス。多くの査読者、スキル作者、会議のチェアの仕事の上に成り立っています。すべての参考文献は SOURCES にあります。",
     au_h: "著者", au_note: "* 同等貢献 · † プロジェクトリーダー",
   };
   const EN = {};

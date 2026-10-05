@@ -22,6 +22,10 @@ authors:
     given-names: Jiaqi
     affiliation: City University of Hong Kong
     email: 3140610478@qq.com
+  - family-names: Zhu
+    given-names: Chenyu
+    affiliation: City University of Hong Kong
+    email: zcy20050413@gmail.com
 version: 0.4.0
 date-released: 2026-10-05
 license: MIT

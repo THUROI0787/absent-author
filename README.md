@@ -10,7 +10,7 @@
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-5B6675?style=flat" alt="MIT license"></a>
 </p>
 
-<p align="center"><b>Ruoyu Zhao</b><sup>1,*,†</sup> · <b>Zhehao Zou</b><sup>2,*</sup> · <b>Jinheng Zhang</b><sup>3</sup> · <b>Yuting Chen</b><sup>4</sup> · <b>Jiaqi Wu</b><sup>1</sup><br><sup>1</sup>City University of Hong Kong · <sup>2</sup>The Chinese University of Hong Kong · <sup>3</sup>University of Pennsylvania · <sup>4</sup>Georgia Institute of Technology<br><sub>* Equal contribution · † Project lead</sub></p>
+<p align="center"><b>Ruoyu Zhao</b><sup>1,*,†</sup> · <b>Zhehao Zou</b><sup>2,*</sup> · <b>Jinheng Zhang</b><sup>3</sup> · <b>Yuting Chen</b><sup>4</sup> · <b>Jiaqi Wu</b><sup>1</sup> · <b>Chenyu Zhu</b><sup>1</sup><br><sup>1</sup>City University of Hong Kong · <sup>2</sup>The Chinese University of Hong Kong · <sup>3</sup>University of Pennsylvania · <sup>4</sup>Georgia Institute of Technology<br><sub>* Equal contribution · † Project lead</sub></p>
 
 <p align="center"><b>English</b> · <a href="README_CN.md">中文</a> · <a href="README_JA.md">日本語</a> · <a href="https://THUROI0787.github.io/absent-author/">Website</a></p>
 
@@ -247,13 +247,14 @@ We thank the authors of the work below. Every source used anywhere in the reposi
 | Jinheng Zhang | University of Pennsylvania | jinhengz@seas.upenn.edu |
 | Yuting Chen | Georgia Institute of Technology | yuting3123@gmail.com |
 | Jiaqi Wu | City University of Hong Kong | 3140610478@qq.com |
+| Chenyu Zhu | City University of Hong Kong | zcy20050413@gmail.com |
 
 Ruoyu Zhao and Zhehao Zou contributed equally. Ruoyu Zhao leads the project.
 
 ```bibtex
 @misc{absentauthor2026,
   title        = {Absent Author: Evidence and Skills for Spotting AI-Produced Papers Without a Responsible Human Author},
-  author       = {Zhao, Ruoyu and Zou, Zhehao and Zhang, Jinheng and Chen, Yuting and Wu, Jiaqi},
+  author       = {Zhao, Ruoyu and Zou, Zhehao and Zhang, Jinheng and Chen, Yuting and Wu, Jiaqi and Zhu, Chenyu},
   note         = {Ruoyu Zhao and Zhehao Zou contributed equally. Project lead: Ruoyu Zhao},
   year         = {2026},
   howpublished = {\url{https://github.com/THUROI0787/absent-author}}

@@ -5,7 +5,7 @@
 - **长期判断**：网站新增 "Where this is going" 一节，README 新增同名一节，`docs/POSITIONING*.md` 新增 §9"双重用途与长期判断"：坦白清单可能被用来洗掉表层痕迹；说明为什么洗文本换不来更好的结论（L 层只计 W，B 与 D 只差 R）；论证评价会从文本转向披露、可核查的产物和当面答辩；提出三个问题（是否透彻理解、敢否当面捍卫、愿否署名背书），并列出四条承诺。引用 Harvard CMSA 峰会报告原文（新增来源键 `[CMSA26]`），三问注明改写自中文媒体对该峰会的评论，不是报告原文。文案明确承认：洗文本能让 D 变成 C（降不了 R），P 层容易修的残留也会被洗掉，skill 的"不替缺席作者工作"只是默认做法、不是安全机制。
 - **skill**：`paper-author-pass` 每次运行结束增加 **Author's checkpoint**：针对具体论文的三个问题（Understand / Defend / Sign），由作者在署名前回答，skill 从不代答、不打分；在审读模式、管线调用和提前停止时也照常输出；`paper-slop-screen` 的报告模板中，给作者的问题按同样三类分组。
 - **日语**：网站支持 EN / 中文 / 日本語 三种语言，默认英文（`?lang=zh` / `?lang=ja` 可直接分享对应语言的链接，访客的选择会被记住）；证据条目正文在日语界面下显示英文。新增 `README_JA.md`（概要版）。
-- **作者与致谢**：作者为 Ruoyu Zhao（项目负责人）、Zhehao Zou（与 Ruoyu Zhao 共同一作）、Jinheng Zhang、Yuting Chen、Jiaqi Wu，单位和邮箱写入 README（三种语言）、网站、`CITATION.cff`、BibTeX 和 `LICENSE`。致谢改为分类列出并逐条链接本项目参考过的 skill、auto-research 管线、论文，以及公开分享所见的会议主席和审稿人。`docs/research_notes/` 新增说明：内容均为公开资料，引用只为说明审稿人观察到了什么，不针对个人或具体论文。
+- **作者与致谢**：作者为 Ruoyu Zhao（项目负责人）、Zhehao Zou（与 Ruoyu Zhao 共同一作）、Jinheng Zhang、Yuting Chen、Jiaqi Wu、Chenyu Zhu，单位和邮箱写入 README（三种语言）、网站、`CITATION.cff`、BibTeX 和 `LICENSE`。致谢改为分类列出并逐条链接本项目参考过的 skill、auto-research 管线、论文，以及公开分享所见的会议主席和审稿人。`docs/research_notes/` 新增说明：内容均为公开资料，引用只为说明审稿人观察到了什么，不针对个人或具体论文。
 - **去 slop 与复核**：三个独立 agent 分别做了三件事：用本项目自己的 lint 和 sentence rules 审读网站与 README 文案（删去自我表扬的结尾句、"清洗无用"之类的过度表述、空泛开场和反问句）；以日语母语编辑的视角审读日文（修正两处语义错误、统一"查読コメント／指摘／リジェクト／チェア"等术语、改进三问的日文）；独立复核事实与功能（核对 CMSA 引文原文、举证责任只由已核实的 ☠ 转移、三语切换与手机端无横向溢出、语言选择在带 `?lang=` 的链接里也能记住）。
 
 ## v0.3.0 — 2026-10-05（打包为 GitHub 仓库）
