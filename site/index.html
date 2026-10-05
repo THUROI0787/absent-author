@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Absent Author: research and writing can be automated, authorship cannot</title>
+<meta name="description" content="An evidence list, two agent skills and a calibrated lint for spotting research papers produced by AI with no responsible human author.">
+<meta property="og:title" content="Absent Author: Research and writing can be automated. Authorship cannot.">
+<meta property="og:description" content="83 evidence items, an author-pass skill for writers, a slop-screen skill for reviewers, and a calibrated lint.">
+<meta property="og:image" content="https://THUROI0787.github.io/absent-author/assets/social.png">
+<meta property="og:url" content="https://THUROI0787.github.io/absent-author/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://THUROI0787.github.io/absent-author/assets/social.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='9' r='6' fill='none' stroke='%232747C7' stroke-width='2.4' stroke-dasharray='3.5 2.5'/%3E%3Cpath d='M4 30 Q4 18 16 18 Q28 18 28 30' fill='none' stroke='%232747C7' stroke-width='2.4' stroke-dasharray='3.5 2.5'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Absent Author, home">
+      <svg width="26" height="26" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="9" r="6" fill="none" stroke="var(--cobalt)" stroke-width="2.4" stroke-dasharray="3.5 2.5"/><path d="M4 30 Q4 18 16 18 Q28 18 28 30" fill="none" stroke="var(--cobalt)" stroke-width="2.4" stroke-dasharray="3.5 2.5"/></svg>
+      Absent Author
+    </a>
+    <nav aria-label="Sections">
+      <a href="#why" data-i18n="nav_why">Why</a>
+      <a href="#quadrants" data-i18n="nav_quad">Quadrants</a>
+      <a href="#evidence" data-i18n="nav_ev">Evidence</a>
+      <a href="#skills" data-i18n="nav_skills">Skills</a>
+      <a href="#calibration" data-i18n="nav_cal">Calibration</a>
+      <a href="#vision" data-i18n="nav_vision">Vision</a>
+    </nav>
+    <div class="tools">
+      <div class="langs" role="group" aria-label="Language">
+        <button type="button" data-lang="en" lang="en" aria-pressed="true">EN</button>
+        <button type="button" data-lang="zh" lang="zh-CN" aria-pressed="false">中文</button>
+        <button type="button" data-lang="ja" lang="ja" aria-pressed="false">日本語</button>
+      </div>
+      <a class="pill repo" href="https://github.com/THUROI0787/absent-author">GitHub</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <h1><span data-i18n="h1a">Research and writing can be automated.</span><span class="line2" data-i18n="h1b">Authorship cannot.</span></h1>
+      <p class="lede" data-i18n="lede">Reviewers now see papers that an agent produced end to end, with no human who steered, checked or owns them. Absent Author is an evidence list, two agent skills and a lint that make that absence visible, with a location and a quote for every claim, and no "AI probability".</p>
+      <div class="cta">
+        <a class="btn primary" href="#evidence" data-i18n="cta_ev">Browse the 83 evidence items</a>
+        <a class="btn" href="#skills" data-i18n="cta_skills">Install the skills</a>
+      </div>
+      <div class="facts">
+        <div><b>83</b><span data-i18n="f1">evidence items, from wording to artifacts</span></div>
+        <div><b>2</b><span data-i18n="f2">skills: one for authors, one for reviewers</span></div>
+        <div><b>6/6</b><span data-i18n="f3">blind-test papers in the expected quadrant (a small first test)</span></div>
+      </div>
+    </div>
+
+    <div class="desk">
+      <article class="manuscript" aria-label="Example manuscript excerpt with annotations">
+        <h2>Unveiling the Hidden Dynamics of Adaptive Gradient Scaling: An Audit</h2>
+        <p class="authorline"><span><svg width="14" height="14" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="9" r="6" fill="none" stroke="#2747C7" stroke-width="3" stroke-dasharray="3.5 2.5"/><path d="M4 30 Q4 18 16 18 Q28 18 28 30" fill="none" stroke="#2747C7" stroke-width="3" stroke-dasharray="3.5 2.5"/></svg>Anonymous Author(s)</span></p>
+        <h3>Abstract</h3>
+        <p class="abs">In the rapidly evolving landscape of deep learning, gradient scaling plays a pivotal role, <mark data-n="0">highlighting the need for robust methods</mark>. <mark data-n="1">We do not claim that our method is optimal</mark>; rather, <mark data-n="2">contrary to our expectations, the proposed ASGD regularizer fails, and we instead audit the learning-rate schedule</mark>. Experiments on <mark data-n="3">three small datasets with three seeds</mark> show a <mark data-n="4">16% improvement (73.1 → 78.0)</mark>, and the ECE reliability diagrams <mark data-n="5">confirm the trend (not shown due to space)</mark>.</p>
+        <div class="notes" aria-live="polite">
+          <a class="note" data-n="0" href="#ev-L08"><span class="tag">L08</span><span data-i18n="n0">-ing tail, writing only</span></a>
+          <a class="note" data-n="1" href="#ev-S01"><span class="tag">S01</span><span data-i18n="n1">defensive writing</span></a>
+          <a class="note" data-n="2" href="#ev-R01"><span class="tag">R01</span><span data-i18n="n2">failed method, relabelled an audit</span></a>
+          <a class="note" data-n="3" href="#ev-R05"><span class="tag">R05</span><span data-i18n="n3">3-3-3 recipe, no reason given</span></a>
+          <a class="note red" data-n="4" href="#ev-R09"><span class="tag">R09</span><span data-i18n="n4">(78.0−73.1)/73.1 is 6.7%</span></a>
+          <a class="note red" data-n="5" href="#ev-R07"><span class="tag">R07</span><span data-i18n="n5">promised, never shown</span></a>
+        </div>
+        <div class="verdict" id="verdict"><span data-i18n="verdict">W2 · R3 → quadrant D</span><small data-i18n="verdict2">language traces alone would only give W</small></div>
+      </article>
+      <div class="desk-bar">
+        <p data-i18n="deskp">A made-up abstract. Yellow marks are what a reviewer can point to; the stamp is what the screen skill concludes from them.</p>
+        <button class="pill" id="replay" type="button" data-i18n="replay">Screen it again</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="why">
+  <div class="wrap">
+    <h2 data-i18n="why_h">We look for an absent author, not for AI.</h2>
+    <p class="intro" data-i18n="why_p">Auto-research is fine; an agent can run experiments and keep complete logs. The problem is a paper nobody steered, verified or owned. That absence comes in three kinds.</p>
+    <div class="absences">
+      <div class="absence">
+        <h3 data-i18n="a1h">Nobody polished it</h3>
+        <p data-i18n="a1p">The writing is AI-led and unowned: dash floods, "not X but Y", defensive caveats, coined terms nobody defined, performative honesty about failed runs.</p>
+        <div class="ids"><a class="id" href="#ev-L01">L01</a><a class="id" href="#ev-L02">L02</a><a class="id" href="#ev-S01">S01</a><a class="id" href="#ev-S05">S05</a><a class="id" href="#ev-S06">S06</a></div>
+      </div>
+      <div class="absence">
+        <h3 data-i18n="a2h">Nobody steered it</h3>
+        <p data-i18n="a2p">No human judged which question was worth asking or what to do when the plan failed: pivots into "audit" papers, theoryslop, toy scale with grand claims.</p>
+        <div class="ids"><a class="id" href="#ev-R01">R01</a><a class="id" href="#ev-R02">R02</a><a class="id" href="#ev-R03">R03</a><a class="id" href="#ev-R04">R04</a><a class="id" href="#ev-S17">S17</a></div>
+      </div>
+      <div class="absence">
+        <h3 data-i18n="a3h">Nobody checked it</h3>
+        <p data-i18n="a3p">The final artifact was never verified: fabricated references, chatbot residue, numbers that disagree between text and table, analyses promised and never shown.</p>
+        <div class="ids"><a class="id red" href="#ev-P03">P03</a><a class="id red" href="#ev-P01">P01</a><a class="id" href="#ev-R09">R09</a><a class="id" href="#ev-R07">R07</a><a class="id" href="#ev-P14">P14</a></div>
+      </div>
+    </div>
+    <blockquote class="defn"><span data-i18n="defn">Slop outsources the cost of verifying a paper to its reviewers.</span>
+      <cite data-i18n="defn_c">Paraphrasing the NeurIPS 2026 Position Paper Track chairs: AI-generated text "externalises the cost of verifying that work, imposing it on reviewers".</cite></blockquote>
+  </div>
+</section>
+
+<section class="block" id="quadrants">
+  <div class="wrap">
+    <h2 data-i18n="q_h">Two questions, four kinds of paper.</h2>
+    <p class="intro" data-i18n="q_p">W asks whether the writing was left AI-led and unpolished. R asks whether the research was left unsteered and unverified. Ordinary weaknesses go to a separate quality axis, so a weak human paper is never called slop.</p>
+    <div class="quad-wrap">
+      <div class="quad" role="group" aria-label="Quadrant chart">
+        <div></div>
+        <div class="axis" data-i18n="ax_r01">R0–R1 · research steered</div>
+        <div class="axis" data-i18n="ax_r23">R2–R3 · steering or checking absent</div>
+        <div class="axis v" data-i18n="ax_w01">W0–W1 · polished</div>
+        <button class="qcell" style="--c:var(--qa)" data-q="A" aria-pressed="false"><span class="L">A</span><span class="n" data-i18n="qa_n">Normal AI-assisted work</span><span class="s" data-i18n="qa_s">Review it like any paper.</span><span class="dots" title="Blind test: 2 human papers"><i class="dot"></i><i class="dot"></i></span></button>
+        <button class="qcell" style="--c:var(--qc)" data-q="C" aria-pressed="false"><span class="L">C</span><span class="n" data-i18n="qc_n">Veneer</span><span class="s" data-i18n="qc_s">Clean prose, unchecked research.</span><span class="dots" title="Blind test: 1 full-pipeline paper"><i class="dot"></i></span></button>
+        <div class="axis v" data-i18n="ax_w23">W2–W3 · AI-led</div>
+        <button class="qcell" style="--c:var(--qb)" data-q="B" aria-pressed="false"><span class="L">B</span><span class="n" data-i18n="qb_n">Salvageable</span><span class="s" data-i18n="qb_s">Real contribution, AI-led writing.</span></button>
+        <button class="qcell" style="--c:var(--qd)" data-q="D" aria-pressed="true"><span class="L">D</span><span class="n" data-i18n="qd_n">AI waste</span><span class="s" data-i18n="qd_s">Nobody steered it, nobody checked it.</span><span class="dots" title="Blind test: 3 AI papers"><i class="dot"></i><i class="dot"></i><i class="dot"></i></span></button>
+      </div>
+      <div class="qpanel" id="qpanel" aria-live="polite">
+        <h3 id="qp-h"></h3>
+        <p class="who" id="qp-who"></p>
+        <ul id="qp-list"></ul>
+        <div class="sliders">
+          <label><span data-i18n="sl_w">Writing W</span><input type="range" id="sw" min="0" max="3" value="2" step="1"><output id="ow">W2</output></label>
+          <label><span data-i18n="sl_r">Research R</span><input type="range" id="sr" min="0" max="3" value="3" step="1"><output id="or">R3</output></label>
+          <p class="hint" data-i18n="sl_hint">Move the sliders to see where a paper lands. The dots are the six blind-test papers.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="pivot">
+  <div class="wrap">
+    <h2 data-i18n="p_h">Where the "audit paper" comes from.</h2>
+    <p class="intro"><span data-i18n="p_p">An auto-review loop optimises an LLM reviewer's score. When a claim fails, re-framing is cheaper than a new experiment, so the score climbs while the claim disappears. The run below is quoted from the README of</span> <a href="https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep">ARIS</a><span data-i18n="p_p2">, whose maintainers have since added anti-over-defence rules and a reviewer-side tool of their own.</span></p>
+    <figure class="fig"><img data-fig="pivot" src="assets/pivot.svg" alt="Line chart: LLM reviewer score rises from 6.5 to 7.5 over four rounds while the surviving claim falls" loading="lazy" width="1120" height="520"></figure>
+  </div>
+</section>
+
+<section class="block" id="evidence">
+  <div class="wrap">
+    <h2 data-i18n="e_h">The evidence list.</h2>
+    <p class="intro" data-i18n="e_p">Every item has a strength, the axis it may count toward, a note on how honest humans trip it, and its sources. The easier a trace is to scrub, the less it is allowed to prove.</p>
+    <div class="ex-controls">
+      <div class="seg" role="group" aria-label="Layer" id="f-layer">
+        <button aria-pressed="true" data-v="all" data-i18n="all">All</button>
+        <button aria-pressed="false" data-v="L" data-i18n="lay_L">L Language</button>
+        <button aria-pressed="false" data-v="S" data-i18n="lay_S">S Structure</button>
+        <button aria-pressed="false" data-v="R" data-i18n="lay_R">R Research</button>
+        <button aria-pressed="false" data-v="P" data-i18n="lay_P">P Artifacts</button>
+        <button aria-pressed="false" data-v="H" data-i18n="lay_H">H Human signs</button>
+      </div>
+      <div class="seg" role="group" aria-label="Strength" id="f-str">
+        <button aria-pressed="true" data-v="all" data-i18n="any">Any strength</button>
+        <button aria-pressed="false" data-v="strong" data-i18n="strongest">Strongest</button>
+        <button aria-pressed="false" data-v="2">★★</button>
+        <button aria-pressed="false" data-v="1">★</button>
+      </div>
+      <label class="search"><span class="skip" data-i18n="search_l">Search evidence</span><input id="q" type="search" placeholder="Search: dash, pivot, references…" data-i18n-ph="search_ph"></label>
+    </div>
+    <p class="count" id="count"></p>
+    <div class="ev-list" id="ev-list"><p style="padding:18px" data-i18n="loading">Loading the evidence list…</p></div>
+    <figure class="fig" style="margin-top:36px"><img data-fig="layers" src="assets/layers.svg" alt="Four evidence layers and what each may count toward" loading="lazy" width="1000" height="570"></figure>
+  </div>
+</section>
+
+<section class="block" id="skills">
+  <div class="wrap">
+    <h2 data-i18n="s_h">Two skills share one list.</h2>
+    <p class="intro" data-i18n="s_p">Plain-Markdown skills for Claude Code, Codex or any agent that reads SKILL.md. Authors run the pass before submission; reviewers run the screen before writing a review.</p>
+    <div class="skills">
+      <div class="skill">
+        <h3>paper-author-pass</h3>
+        <p class="for" data-i18n="ap_for">For authors. Top-down: the skill asks, the human decides.</p>
+        <ol>
+          <li><span><b data-i18n="ap1">Story and taste.</b> <span data-i18n="ap1d">One-sentence test, steering card, pivot check, scale against claims.</span></span></li>
+          <li><span><b data-i18n="ap2">Argument.</b> <span data-i18n="ap2d">Caveats into one Limitations section, a term table for coined words, related work as comparison.</span></span></li>
+          <li><span><b data-i18n="ap3">Verification.</b> <span data-i18n="ap3d">Every reference, every number, code against paper.</span></span></li>
+          <li><span><b data-i18n="ap4">Sentences, last.</b> <span data-i18n="ap4d">Fix traces that hurt reading. Never inject fake "human" typos or fragments.</span></span></li>
+          <li><span><b data-i18n="ap5">Author's checkpoint.</b> <span data-i18n="ap5d">Three questions about this paper for the author to answer before signing: understand it, defend it, sign it.</span></span></li>
+        </ol>
+        <p class="rule" data-i18n="ap_rule">Without a human author, the skill only audits and returns questions. Polishing an unsteered paper would just turn a D into a C.</p>
+      </div>
+      <div class="skill">
+        <h3>paper-slop-screen</h3>
+        <p class="for" data-i18n="sc_for">For reviewers, ACs and co-authors. Evidence first, no AI probability.</p>
+        <ol>
+          <li><span><b data-i18n="sc1">Iron-clad sweep.</b> <span data-i18n="sc1d">Verify references by author list, find residue and watermarks.</span></span></li>
+          <li><span><b data-i18n="sc2">Steering card.</b> <span data-i18n="sc2d">Pivot, promised against shown, numbers, scale, novelty.</span></span></li>
+          <li><span><b data-i18n="sc3">Structure, language, counter-evidence.</b> <span data-i18n="sc3d">Five minutes, and H items can cancel findings.</span></span></li>
+          <li><span><b data-i18n="sc4">Grade and report.</b> <span data-i18n="sc4d">W, R, Q, flags, auditability; a substance-only review paragraph, and questions for the authors via the AC, grouped as understand, defend, sign.</span></span></li>
+        </ol>
+        <p class="rule" data-i18n="sc_rule">Check your venue's reviewer LLM policy before running it on a submission under review.</p>
+      </div>
+    </div>
+    <div class="install">
+      <button class="copy" type="button" id="copy" data-i18n="copy">Copy</button>
+<pre id="install-code">git clone https://github.com/THUROI0787/absent-author.git && cd absent-author
+./install.sh            # or: ./install.sh --project | --codex | --dest DIR | --link
+python tools/slop_lint.py paper/ --source -o lint.md</pre>
+    </div>
+    <div class="prompts">
+      <p data-i18n="prompts_h">Then ask your agent:</p>
+      <p class="prompt">Use paper-author-pass on paper/ in audit mode. I'll answer your questions.</p>
+      <p class="prompt">Use paper-slop-screen to triage this arXiv preprint.</p>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="calibration">
+  <div class="wrap">
+    <h2 data-i18n="c_h">What we measured, and what it can't tell you.</h2>
+    <p class="intro" data-i18n="c_p">We calibrated the lint on 59 pre-ChatGPT arXiv papers against 20 AI-generated ones, then blind-tested the screen skill on six documents whose labels we revealed only afterwards.</p>
+    <div class="stack">
+      <figure class="fig"><img data-fig="calibration" src="assets/calibration.svg" alt="Bar chart of AUC per lint check" loading="lazy" width="1000" height="734">
+        <figcaption data-i18n="c_cap">In-sample and era-confounded: 13 of the 20 AI papers come from one pipeline. Treat these numbers as a map of what surface traces look like, not as detector accuracy.</figcaption></figure>
+      <div>
+        <table class="bt">
+          <thead><tr><th data-i18n="bt1">What it really was</th><th data-i18n="bt2">Screen result</th></tr></thead>
+          <tbody>
+            <tr><td data-i18n="bt_a">Human ACL 2018 paper</td><td><span class="q" style="color:var(--qa)">A</span> · W0 R0</td></tr>
+            <tr><td data-i18n="bt_b">Human 2021 paper, non-native authors</td><td><span class="q" style="color:var(--qa)">A</span> · W0 R1</td></tr>
+            <tr><td data-i18n="bt_c">AI Scientist v2 workshop paper (disclosed)</td><td><span class="q" style="color:var(--qd)">D</span> · W2 R3</td></tr>
+            <tr><td data-i18n="bt_d">AI Scientist v1 example paper (disclosed)</td><td><span class="q" style="color:var(--qd)">D</span> · W2 R3 · 3 flags</td></tr>
+            <tr><td data-i18n="bt_e">2026 autonomous-agent paper, agent use disclosed</td><td><span class="q" style="color:var(--qd)">D</span> · W3 R3</td></tr>
+            <tr><td data-i18n="bt_f">2026 full auto-research pipeline paper</td><td><span class="q" style="color:var(--qc)">C</span> · W1 R3 · 2 flags</td></tr>
+          </tbody>
+        </table>
+        <p class="count" style="margin-top:14px" data-i18n="bt_note">The two 2026 papers had almost no language traces (L-cluster 0 and 1 of 6). What gave them away was arithmetic: the same configuration scoring 63.4 in one table and 57.2 in another, "12.4% of 207" that is not a whole number, a reference with arXiv ID 2409.XXXXX.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="rules">
+  <div class="wrap">
+    <h2 data-i18n="r_h">What this is not.</h2>
+    <ol class="rules">
+      <li><span><b data-i18n="r1">Not an AI detector.</b><span data-i18n="r1d">No probabilities. In a 2023 study, AI detectors flagged about 61% of non-native TOEFL essays as AI-written.</span></span></li>
+      <li><span><b data-i18n="r2">Language never convicts.</b><span data-i18n="r2d">L-layer traces count toward writing only, never toward research.</span></span></li>
+      <li><span><b data-i18n="r3">Junior is not absent.</b><span data-i18n="r3d">First papers and non-native writing trip several items; they count only alongside R or P evidence.</span></span></li>
+      <li><span><b data-i18n="r4">Not a public accusation.</b><span data-i18n="r4d">Reviews state checkable defects; provenance goes to the AC as questions authors can answer.</span></span></li>
+      <li><span><b data-i18n="r5">Not a laundering service.</b><span data-i18n="r5d">The writing skill refuses to answer its own author questions or polish a paper without a human author.</span></span></li>
+      <li><span><b data-i18n="r6">Not against AI.</b><span data-i18n="r6d">Heavy AI execution plus logs, code and a specific AI statement earns an A+ auditability rating.</span></span></li>
+    </ol>
+  </div>
+</section>
+
+<section class="block vision" id="vision">
+  <div class="wrap">
+    <h2 data-i18n="v_h">Where this is going.</h2>
+    <p class="intro" data-i18n="v_p">We publish this list knowing that some people will use it to hide the absence it is meant to find.</p>
+    <div class="absences vgrid">
+      <div class="absence">
+        <h3 data-i18n="v1h">It can be misused.</h3>
+        <p data-i18n="v1p">Anyone can load the evidence list into a writing agent and scrub the surface traces, including chatbot residue and pipeline watermarks. Paraphrasing tools already do much of that. The list does not depend on staying secret.</p>
+      </div>
+      <div class="absence">
+        <h3 data-i18n="v2h">Clean prose cannot hide unchecked research.</h3>
+        <p data-i18n="v2p">Scrubbing text can lower the writing grade, never the research grade. A paper nobody steered or checked moves from D to C at best, and C is where the screen looks hardest: references that exist, numbers that reproduce, design choices someone can explain. A checklist cannot supply those. We chose not to compete on wording.</p>
+      </div>
+      <div class="absence">
+        <h3 data-i18n="v3h">Text proves less and less.</h3>
+        <p data-i18n="v3p">For many papers, writing is no longer the hard part, and polished prose already says little about who stands behind it. We expect evaluation to move to what only a present author can supply: disclosed AI use, artifacts others can check (code, logs, formal proofs), and the ability to defend the work in person. We publish the list partly so that surface traces stop counting sooner.</p>
+      </div>
+    </div>
+    <div class="questions">
+      <p class="qlabel" data-i18n="vq_l">Before you sign a paper, AI-assisted or not, answer three questions.</p>
+      <ol>
+        <li data-i18n="vq1">Do you understand it thoroughly?</li>
+        <li data-i18n="vq2">Would you defend it face to face?</li>
+        <li data-i18n="vq3">Will you put your name behind it?</li>
+      </ol>
+      <p class="qsrc"><span data-i18n="vq_src">Adapted from Chinese-language commentary on the</span> <a href="https://cmsa.fas.harvard.edu/media/2026/09/Summit-on-PhD-Math-Education-in-the-Age-of-AI.pdf" data-i18n="vq_src_a">Harvard CMSA Summit on PhD Math Education in the Age of AI</a><span data-i18n="vq_src2"> (September 2026). The report itself asks that AI use "accelerate understanding, not bypass understanding", and that each student "maintain responsibility for the correctness and understanding" of the mathematics under their name.</span></p>
+    </div>
+    <h3 class="commit-h" data-i18n="vc_h">What we commit to</h3>
+    <ul class="commit">
+      <li data-i18n="vc1">The skills ask these questions and never answer them. The skills are MIT-licensed and anyone can change them, so this is a default we keep, not a lock.</li>
+      <li data-i18n="vc2">No AI probabilities. Every finding comes with a location and a quote.</li>
+      <li data-i18n="vc3">Only disqualifying (☠) evidence that a person has checked can shift the burden of proof to the authors.</li>
+      <li data-i18n="vc4">False positives are logged in public, and they change the list.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="block" id="contribute">
+  <div class="wrap">
+    <h2 data-i18n="k_h">Help keep the list honest.</h2>
+    <p class="intro" data-i18n="k_p">Word lists go stale and pipelines learn to scrub. The list stays useful only if reviewers keep feeding it real cases, including the ones where it was wrong.</p>
+    <div class="contrib">
+      <a class="card repo-link" data-path="/issues/new?template=new-evidence.yml" href="https://github.com/THUROI0787/absent-author/issues/new?template=new-evidence.yml"><h3 data-i18n="k1">Propose evidence</h3><p data-i18n="k1d">A pattern you keep seeing, with an example and one way a human could also produce it.</p></a>
+      <a class="card repo-link" data-path="/issues/new?template=field-report.yml" href="https://github.com/THUROI0787/absent-author/issues/new?template=field-report.yml"><h3 data-i18n="k2">File a field report</h3><p data-i18n="k2d">An anonymised case from a review you finished, and what happened next.</p></a>
+      <a class="card repo-link" data-path="/issues/new?template=false-positive.yml" href="https://github.com/THUROI0787/absent-author/issues/new?template=false-positive.yml"><h3 data-i18n="k3">Report a false positive</h3><p data-i18n="k3d">The screen flagged a human paper. Those reports matter most.</p></a>
+    </div>
+    <div class="people" id="authors">
+      <h3 data-i18n="au_h">Authors</h3>
+      <ul class="authors">
+        <li><a href="mailto:thuroi175007@gmail.com">Ruoyu Zhao</a><sup>1,*,†</sup></li>
+        <li><a href="mailto:zouzhehao0907@gmail.com">Zhehao Zou</a><sup>2,*</sup></li>
+        <li><a href="mailto:jinhengz@seas.upenn.edu">Jinheng Zhang</a><sup>3</sup></li>
+        <li><a href="mailto:yuting3123@gmail.com">Yuting Chen</a><sup>4</sup></li>
+        <li><a href="mailto:3140610478@qq.com">Jiaqi Wu</a><sup>1</sup></li>
+      </ul>
+      <p class="affil"><sup>1</sup>City University of Hong Kong · <sup>2</sup>The Chinese University of Hong Kong · <sup>3</sup>University of Pennsylvania · <sup>4</sup>Georgia Institute of Technology</p>
+      <p class="affil"><span data-i18n="au_note">* Equal contribution · † Project lead</span></p>
+    </div>
+    <div class="cite" id="cite">
+      <h3 data-i18n="cite_h">Cite</h3>
+<pre>@misc{absentauthor2026,
+  title  = {Absent Author: Evidence and Skills for Spotting AI-Produced Papers Without a Responsible Human Author},
+  author = {Zhao, Ruoyu and Zou, Zhehao and Zhang, Jinheng and Chen, Yuting and Wu, Jiaqi},
+  note   = {Ruoyu Zhao and Zhehao Zou contributed equally. Project lead: Ruoyu Zhao},
+  year   = {2026},
+  howpublished = {\url{https://github.com/THUROI0787/absent-author}}
+}</pre>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span data-i18n="foot">© 2026 Ruoyu Zhao, Zhehao Zou, Jinheng Zhang, Yuting Chen, Jiaqi Wu. MIT licensed. Built on the work of many reviewers, skill authors and venue chairs; see SOURCES for every reference.</span>
+    <span><a class="repo-link" data-path="" href="https://github.com/THUROI0787/absent-author">GitHub</a> · <a class="repo-link" data-path="/blob/main/EVIDENCE.md" href="https://github.com/THUROI0787/absent-author/blob/main/EVIDENCE.md">EVIDENCE.md</a> · <a class="repo-link" data-path="/blob/main/docs/SOURCES.md" href="https://github.com/THUROI0787/absent-author/blob/main/docs/SOURCES.md">SOURCES</a></span>
+  </div>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+name: False positive
+description: The list, the lint or the screen skill flagged a paper that a human did steer and check
+title: "[false positive] "
+labels: ["false-positive"]
+body:
+  - type: markdown
+    attributes:
+      value: These reports matter most. They keep the list from drifting toward harsher and harsher rules.
+  - type: input
+    id: ids
+    attributes: { label: Which evidence IDs or lint checks fired?, placeholder: "e.g. L03, L15, S01" }
+    validations: { required: true }
+  - type: textarea
+    id: why
+    attributes: { label: Why is it a false positive?, description: "What shows a human steered and checked the work (logs, history, authorship, writing background)?" }
+    validations: { required: true }
+  - type: dropdown
+    id: context
+    attributes:
+      label: Context
+      options: ["non-native English writing", "first paper / junior author", "heavy copy-editing by a human editor", "unusual field conventions", "tool artifact (BibTeX, template, PDF extraction)", "other"]
+  - type: textarea
+    id: fix
+    attributes: { label: Suggested change to the item or threshold }

@@ -1,0 +1,9 @@
+\begin{thebibliography}{2}
+\bibitem[Vaswani et~al.(2017)]{Vaswani2017AttentionIA}
+Ashish Vaswani et~al.
+\newblock Attention is all you need.
+\newblock Verified by HTML fetch on 2026-05-14. Verdict: not a near-hit.
+\bibitem[Doe(2023)]{doe2023gradient}
+John Doe.
+\newblock Gradient noise and everything.
+\end{thebibliography}

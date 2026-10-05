@@ -1,0 +1,142 @@
+[
+ {
+  "id": "sakana_v1/adaptive_dual_scale_denoising",
+  "path": "repos/SakanaAI_AI-Scientist/example_papers/adaptive_dual_scale_denoising/latex",
+  "era": "2024",
+  "source": "SakanaAI/AI-Scientist example_papers (LaTeX)",
+  "how_we_know": "Released by Sakana as end-to-end output of The AI Scientist v1; no human editing claimed."
+ },
+ {
+  "id": "sakana_v1/data_augmentation_grokking",
+  "path": "repos/SakanaAI_AI-Scientist/example_papers/data_augmentation_grokking/latex",
+  "era": "2024",
+  "source": "SakanaAI/AI-Scientist example_papers (LaTeX)",
+  "how_we_know": "Same as above."
+ },
+ {
+  "id": "sakana_v1/dual_expert_denoiser",
+  "path": "repos/SakanaAI_AI-Scientist/example_papers/dual_expert_denoiser/latex",
+  "era": "2024",
+  "source": "SakanaAI/AI-Scientist example_papers (LaTeX)",
+  "how_we_know": "Same as above."
+ },
+ {
+  "id": "sakana_v1/gan_diffusion",
+  "path": "repos/SakanaAI_AI-Scientist/example_papers/gan_diffusion/latex",
+  "era": "2024",
+  "source": "SakanaAI/AI-Scientist example_papers (LaTeX)",
+  "how_we_know": "Same as above."
+ },
+ {
+  "id": "sakana_v1/grid_based_noise_adaptation",
+  "path": "repos/SakanaAI_AI-Scientist/example_papers/grid_based_noise_adaptation/latex",
+  "era": "2024",
+  "source": "SakanaAI/AI-Scientist example_papers (LaTeX)",
+  "how_we_know": "Same as above."
+ },
+ {
+  "id": "sakana_v1/layerwise_lr_grokking",
+  "path": "repos/SakanaAI_AI-Scientist/example_papers/layerwise_lr_grokking/latex",
+  "era": "2024",
+  "source": "SakanaAI/AI-Scientist example_papers (LaTeX)",
+  "how_we_know": "Same as above."
+ },
+ {
+  "id": "sakana_v1/mdl_grokking_correlation",
+  "path": "repos/SakanaAI_AI-Scientist/example_papers/mdl_grokking_correlation/latex",
+  "era": "2024",
+  "source": "SakanaAI/AI-Scientist example_papers (LaTeX)",
+  "how_we_know": "Same as above."
+ },
+ {
+  "id": "sakana_v1/multi_style_adapter",
+  "path": "repos/SakanaAI_AI-Scientist/example_papers/multi_style_adapter/latex",
+  "era": "2024",
+  "source": "SakanaAI/AI-Scientist example_papers (LaTeX)",
+  "how_we_know": "Same as above."
+ },
+ {
+  "id": "sakana_v1/rl_lr_adaptation",
+  "path": "repos/SakanaAI_AI-Scientist/example_papers/rl_lr_adaptation/latex",
+  "era": "2024",
+  "source": "SakanaAI/AI-Scientist example_papers (LaTeX)",
+  "how_we_know": "Same as above."
+ },
+ {
+  "id": "sakana_v1/weight_initialization_grokking",
+  "path": "repos/SakanaAI_AI-Scientist/example_papers/weight_initialization_grokking/latex",
+  "era": "2024",
+  "source": "SakanaAI/AI-Scientist example_papers (LaTeX)",
+  "how_we_know": "Same as above."
+ },
+ {
+  "id": "sakana_v2/compositional-regularization",
+  "path": "lint/corpus/ai_pdf/sakana2_compositional-regularization.txt",
+  "era": "2025",
+  "source": "SakanaAI/AI-Scientist-ICLR2025-Workshop-Experiment annotated_paper.pdf (text via pypdf; reviewer margin comments and line numbers stripped)",
+  "how_we_know": "Sakana's ICLR 2025 ICBINB workshop experiment: paper generated end-to-end by AI Scientist v2 (the one that passed workshop review)."
+ },
+ {
+  "id": "sakana_v2/label-noise",
+  "path": "lint/corpus/ai_pdf/sakana2_label-noise.txt",
+  "era": "2025",
+  "source": "same repo, PDF text",
+  "how_we_know": "Same experiment; AI Scientist v2 output."
+ },
+ {
+  "id": "sakana_v2/pest-detection",
+  "path": "lint/corpus/ai_pdf/sakana2_pest-detection.txt",
+  "era": "2025",
+  "source": "same repo, PDF text",
+  "how_we_know": "Same experiment; AI Scientist v2 output."
+ },
+ {
+  "id": "arXiv:2503.10619",
+  "path": "lint/corpus/ai/2503.10619",
+  "era": "2025",
+  "source": "arXiv e-print (Tempest, ACL 2025 Main)",
+  "how_we_know": "Intology states Zochi (AI system) did the research and wrote the paper; humans did figures, citation formatting and minor fixes (Intology announcement / LessWrong post 'Zochi publishes a paper')."
+ },
+ {
+  "id": "arXiv:2503.10617",
+  "path": "lint/corpus/ai/2503.10617",
+  "era": "2025",
+  "source": "arXiv e-print (CS-ReFT, ICLR 2025 SCOPE workshop)",
+  "how_we_know": "Intology's Zochi tech report (intology.ai/blog/zochi-tech-report, as summarized by hub.baai.ac.cn/view/44283) names CS-ReFT (arXiv 2503.10617) and Siege (= Tempest, 2503.10619) as Zochi's two ICLR 2025 workshop papers, hypothesis-to-paper done by the AI. arXiv version may contain later human edits."
+ },
+ {
+  "id": "arXiv:2510.21341",
+  "path": "lint/corpus/ai/2510.21341",
+  "era": "2025",
+  "source": "arXiv e-print (Magellan, Agents4Science 2025)",
+  "how_we_know": "Agents4Science requires an AI first author; its AI Involvement Checklist answers are C (mostly AI) x3 and D (>95% AI) x1."
+ },
+ {
+  "id": "arXiv:2510.16194",
+  "path": "lint/corpus/ai/2510.16194",
+  "era": "2025",
+  "source": "arXiv e-print (TEAM-PHI, Agents4Science 2025 spotlight)",
+  "how_we_know": "Agents4Science checklist: hypothesis A (human), experiments/analysis/writing C (mostly AI). Weakest AI label in the set."
+ },
+ {
+  "id": "arXiv:2509.04504",
+  "path": "lint/corpus/ai/2509.04504",
+  "era": "2025",
+  "source": "arXiv e-print (Behavioral Fingerprinting, submitted to Agents4Science 2025)",
+  "how_we_know": "arXiv comment says submitted to Agents4Science (AI-first-author venue); no checklist in the arXiv source, so the degree of AI involvement is unknown beyond the venue rule."
+ },
+ {
+  "id": "arXiv:2609.34292",
+  "path": "lint/corpus/ai/2609.34292",
+  "era": "2026",
+  "source": "arXiv e-print (solid-state-physics-inspired LLM compression)",
+  "how_we_know": "Abstract: 'a three-month autonomous research-agent program'; paper states 'An autonomous research agent (Claude Opus 4.7) ... generated, surveyed ...' under the author's direction."
+ },
+ {
+  "id": "ARIS/UAV-CC",
+  "path": "repos/wanshuiyin_Auto-claude-code-research-in-sleep/community_papers/UAV-CC.pdf -> lint/corpus/ai_pdf/aris_uavcc.txt",
+  "era": "2026",
+  "source": "ARIS community showcase PDF (text via pypdf)",
+  "how_we_know": "ARIS README community showcase: built with the full ARIS pipeline, Claude Opus 4.6 executor + GPT-5.5 reviewer. Human-in-the-loop amount unknown."
+ }
+]

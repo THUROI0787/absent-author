@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "If you use this evidence list or the skills, please cite it as below. Ruoyu Zhao and Zhehao Zou contributed equally; Ruoyu Zhao is the project lead."
+title: "Absent Author: Evidence and Skills for Spotting AI-Produced Papers Without a Responsible Human Author"
+authors:
+  - family-names: Zhao
+    given-names: Ruoyu
+    affiliation: City University of Hong Kong
+    email: thuroi175007@gmail.com
+  - family-names: Zou
+    given-names: Zhehao
+    affiliation: The Chinese University of Hong Kong
+    email: zouzhehao0907@gmail.com
+  - family-names: Zhang
+    given-names: Jinheng
+    affiliation: University of Pennsylvania
+    email: jinhengz@seas.upenn.edu
+  - family-names: Chen
+    given-names: Yuting
+    affiliation: Georgia Institute of Technology
+    email: yuting3123@gmail.com
+  - family-names: Wu
+    given-names: Jiaqi
+    affiliation: City University of Hong Kong
+    email: 3140610478@qq.com
+version: 0.4.0
+date-released: 2026-10-05
+license: MIT
+repository-code: "https://github.com/THUROI0787/absent-author"
+url: "https://THUROI0787.github.io/absent-author/"
+keywords: [peer review, AI-generated papers, research integrity, LLM, agent skills]

@@ -1,0 +1,482 @@
+[
+ {
+  "id": "1905.10729",
+  "cat": "cs.LG",
+  "year": 2019,
+  "title": "Purifying Adversarial Perturbation with Adversarially Trained Auto-encoders",
+  "comments": "",
+  "version": "v1"
+ },
+ {
+  "id": "1905.10768",
+  "cat": "cs.LG",
+  "year": 2019,
+  "title": "Precision-Recall Curves Using Information Divergence Frontiers",
+  "comments": "Updated to the AISTATS 2020 version",
+  "version": "v1"
+ },
+ {
+  "id": "1905.10802",
+  "cat": "cs.LG",
+  "year": 2019,
+  "title": "Hyperbolic Interaction Model For Hierarchical Multi-Label Classification",
+  "comments": "",
+  "version": "v1"
+ },
+ {
+  "id": "2011.10605",
+  "cat": "cs.LG",
+  "year": 2020,
+  "title": "Nested Mixture of Experts: Cooperative and Competitive Learning of Hybrid Dynamical System",
+  "comments": "Accepted to 2021 L4DC",
+  "version": "v1"
+ },
+ {
+  "id": "2011.10549",
+  "cat": "cs.LG",
+  "year": 2020,
+  "title": "Graph Signal Recovery Using Restricted Boltzmann Machines",
+  "comments": "Paper: 27 pages, 9 figures. Appendix: 5 pages, 12 figures. Submitted to Expert Systems with Applications",
+  "version": "v1"
+ },
+ {
+  "id": "2011.10396",
+  "cat": "cs.LG",
+  "year": 2020,
+  "title": "Double Self-weighted Multi-view Clustering via Adaptive View Fusion",
+  "comments": "Corresponding author: Xiang Fang",
+  "version": "v1"
+ },
+ {
+  "id": "2101.06178",
+  "cat": "cs.LG",
+  "year": 2021,
+  "title": "Learning to Sample from Censored Markov Random Fields",
+  "comments": "",
+  "version": "v1"
+ },
+ {
+  "id": "2101.06768",
+  "cat": "cs.LG",
+  "year": 2021,
+  "title": "Spatial Network Decomposition for Fast and Scalable AC-OPF Learning",
+  "comments": "",
+  "version": "v1"
+ },
+ {
+  "id": "2101.06802",
+  "cat": "cs.LG",
+  "year": 2021,
+  "title": "Measure-conditional Discriminator with Stationary Optimum for GANs and Statistical Distance Surrogates",
+  "comments": "",
+  "version": "v1"
+ },
+ {
+  "id": "2205.14846",
+  "cat": "cs.LG",
+  "year": 2022,
+  "title": "Precise Learning Curves and Higher-Order Scaling Limits for Dot Product Kernel Regression",
+  "comments": "42 pages; 5 + 6 figures",
+  "version": "v1"
+ },
+ {
+  "id": "2205.14817",
+  "cat": "cs.LG",
+  "year": 2022,
+  "title": "Mitigating Out-of-Distribution Data Density Overestimation in Energy-Based Models",
+  "comments": "",
+  "version": "v1"
+ },
+ {
+  "id": "2205.14905",
+  "cat": "cs.LG",
+  "year": 2022,
+  "title": "Confederated Learning: Federated Learning with Decentralized Edge Servers",
+  "comments": "13 pages, 5 figures",
+  "version": "v1"
+ },
+ {
+  "id": "2009.11032",
+  "cat": "cs.CL",
+  "year": 2020,
+  "title": "Streamlining Cross-Document Coreference Resolution: Evaluation and Modeling",
+  "comments": "",
+  "version": "v1"
+ },
+ {
+  "id": "2009.10684",
+  "cat": "cs.CL",
+  "year": 2020,
+  "title": "Let's Stop Incorrect Comparisons in End-to-end Relation Extraction!",
+  "comments": "Accepted at EMNLP 2020",
+  "version": "v1"
+ },
+ {
+  "id": "2009.12506",
+  "cat": "cs.CL",
+  "year": 2020,
+  "title": "Learning to Plan and Realize Separately for Open-Ended Dialogue Systems",
+  "comments": "Accepted at EMNLP 2020 (Findings)",
+  "version": "v1"
+ },
+ {
+  "id": "2109.05250",
+  "cat": "cs.CL",
+  "year": 2021,
+  "title": "Towards Evaluation of Cross-document Coreference Resolution Models Using Datasets with Diverse Annotation Schemes",
+  "comments": "The paper was accepted at LREC 2022: this https URL",
+  "version": "v1"
+ },
+ {
+  "id": "2109.05729",
+  "cat": "cs.CL",
+  "year": 2021,
+  "title": "CPT: A Pre-Trained Unbalanced Transformer for Both Chinese Language Understanding and Generation",
+  "comments": "Code is available at this https URL",
+  "version": "v1"
+ },
+ {
+  "id": "2109.05349",
+  "cat": "cs.CL",
+  "year": 2021,
+  "title": "HYDRA -- Hyper Dependency Representation Attentions",
+  "comments": "",
+  "version": "v1"
+ },
+ {
+  "id": "2201.12926",
+  "cat": "cs.CL",
+  "year": 2022,
+  "title": "Compositionality as Lexical Symmetry",
+  "comments": "ACL2023 Final Version",
+  "version": "v1"
+ },
+ {
+  "id": "2201.12546",
+  "cat": "cs.CL",
+  "year": 2022,
+  "title": "Progressive Continual Learning for Spoken Keyword Spotting",
+  "comments": "ICASSP 2022",
+  "version": "v1"
+ },
+ {
+  "id": "2201.12502",
+  "cat": "cs.CL",
+  "year": 2022,
+  "title": "Unsupervised Multi-Granularity Summarization",
+  "comments": "EMNLP 2022 Findings",
+  "version": "v1"
+ },
+ {
+  "id": "1903.11207",
+  "cat": "cs.CV",
+  "year": 2019,
+  "title": "Information Maximizing Visual Question Generation",
+  "comments": "CVPR 2019",
+  "version": "v1"
+ },
+ {
+  "id": "1903.11701",
+  "cat": "cs.CV",
+  "year": 2019,
+  "title": "Zero-shot Image Recognition Using Relational Matching, Adaptation and Calibration",
+  "comments": "International Joint Conference on Neural Networks (IJCNN) 2019. Copyright 2019 IEEE",
+  "version": "v1"
+ },
+ {
+  "id": "1903.11332",
+  "cat": "cs.CV",
+  "year": 2019,
+  "title": "Speed Invariant Time Surface for Learning to Detect Corner Points with Event-Based Cameras",
+  "comments": "8 pages, 7 figures, accepted at CVPR 2019",
+  "version": "v1"
+ },
+ {
+  "id": "2001.03398",
+  "cat": "cs.CV",
+  "year": 2020,
+  "title": "DSGN: Deep Stereo Geometry Network for 3D Object Detection",
+  "comments": "Accepted by CVPR 2020 (Camera Ready)",
+  "version": "v1"
+ },
+ {
+  "id": "2001.03032",
+  "cat": "cs.CV",
+  "year": 2020,
+  "title": "Virtual to Real adaptation of Pedestrian Detectors",
+  "comments": "",
+  "version": "v1"
+ },
+ {
+  "id": "2001.03024",
+  "cat": "cs.CV",
+  "year": 2020,
+  "title": "DeeperForensics-1.0: A Large-Scale Dataset for Real-World Face Forgery Detection",
+  "comments": "CVPR 2020. Project page: this https URL",
+  "version": "v1"
+ },
+ {
+  "id": "2105.00268",
+  "cat": "cs.CV",
+  "year": 2021,
+  "title": "Lite-FPN for Keypoint-based Monocular 3D Object Detection",
+  "comments": "11 pages, 4 figures",
+  "version": "v1"
+ },
+ {
+  "id": "2105.00249",
+  "cat": "cs.CV",
+  "year": 2021,
+  "title": "A Master Key Backdoor for Universal Impersonation Attack against DNN-based Face Verification",
+  "comments": "",
+  "version": "v1"
+ },
+ {
+  "id": "2105.00369",
+  "cat": "cs.CV",
+  "year": 2021,
+  "title": "Learning data association without data association: An EM approach to neural assignment prediction",
+  "comments": "",
+  "version": "v1"
+ },
+ {
+  "id": "2203.04130",
+  "cat": "cs.CV",
+  "year": 2022,
+  "title": "NeReF: Neural Refractive Field for Fluid Surface Reconstruction and Implicit Representation",
+  "comments": "",
+  "version": "v1"
+ },
+ {
+  "id": "2203.04446",
+  "cat": "cs.CV",
+  "year": 2022,
+  "title": "Self-Supervised Domain Calibration and Uncertainty Estimation for Place Recognition",
+  "comments": "",
+  "version": "v1"
+ },
+ {
+  "id": "2203.04670",
+  "cat": "cs.CV",
+  "year": 2022,
+  "title": "Structure-Aware Flow Generation for Human Body Reshaping",
+  "comments": "",
+  "version": "v1"
+ },
+ {
+  "id": "1803.06971",
+  "cat": "stat.ML",
+  "year": 2018,
+  "title": "What Doubling Tricks Can and Can't Do for Multi-Armed Bandits",
+  "comments": "",
+  "version": "v1"
+ },
+ {
+  "id": "1803.10590",
+  "cat": "stat.ML",
+  "year": 2018,
+  "title": "Feed-forward Uncertainty Propagation in Belief and Neural Networks",
+  "comments": "error corrections",
+  "version": "v1"
+ },
+ {
+  "id": "1803.10459",
+  "cat": "stat.ML",
+  "year": 2018,
+  "title": "Graphite: Iterative Generative Modeling of Graphs",
+  "comments": "ICML 2019",
+  "version": "v1"
+ },
+ {
+  "id": "2010.12605",
+  "cat": "stat.ML",
+  "year": 2020,
+  "title": "Using machine learning to correct model error in data assimilation and forecast applications",
+  "comments": "",
+  "version": "v1"
+ },
+ {
+  "id": "2010.11595",
+  "cat": "stat.ML",
+  "year": 2020,
+  "title": "Early Anomaly Detection in Time Series: A Hierarchical Approach for Predicting Critical Health Episodes",
+  "comments": "",
+  "version": "v1"
+ },
+ {
+  "id": "2010.13018",
+  "cat": "stat.ML",
+  "year": 2020,
+  "title": "Adversarial Robust Low Rank Matrix Estimation: Compressed Sensing and Matrix Completion",
+  "comments": "The lasso part of this manuscript with contaminated input as well as output is investigated in arXiv:2208.11592. This manuscript will not be submitted for publications",
+  "version": "v1"
+ },
+ {
+  "id": "2211.07533",
+  "cat": "stat.ML",
+  "year": 2022,
+  "title": "Generalized Balancing Weights via Deep Neural Networks",
+  "comments": "",
+  "version": "v1"
+ },
+ {
+  "id": "2211.01774",
+  "cat": "stat.ML",
+  "year": 2022,
+  "title": "Jump-Diffusion Langevin Dynamics for Multimodal Posterior Sampling",
+  "comments": "",
+  "version": "v1"
+ },
+ {
+  "id": "2211.10805",
+  "cat": "stat.ML",
+  "year": 2022,
+  "title": "On the Pointwise Behavior of Recursive Partitioning and Its Implications for Heterogeneous Causal Effect Estimation",
+  "comments": "",
+  "version": "v1"
+ },
+ {
+  "id": "1805.07857",
+  "cat": "cs.LG",
+  "year": 2018,
+  "title": "Parallel Transport Convolution: A New Tool for Convolutional Neural Networks on Manifolds",
+  "comments": "10 pages",
+  "version": "v1"
+ },
+ {
+  "id": "1805.08395",
+  "cat": "cs.LG",
+  "year": 2018,
+  "title": "Learning to Optimize via Wasserstein Deep Inverse Optimal Control",
+  "comments": "",
+  "version": "v1"
+ },
+ {
+  "id": "1805.06822",
+  "cat": "cs.LG",
+  "year": 2018,
+  "title": "DNN or k-NN: That is the Generalize vs. Memorize Question",
+  "comments": "Poster presented in NIPS 2018 \"Integration of Deep Learning Theories\" workshop",
+  "version": "v1"
+ },
+ {
+  "id": "1805.03620",
+  "cat": "cs.CL",
+  "year": 2018,
+  "title": "On the Limitations of Unsupervised Bilingual Dictionary Induction",
+  "comments": "ACL 2018",
+  "version": "v1"
+ },
+ {
+  "id": "1805.04793",
+  "cat": "cs.CL",
+  "year": 2018,
+  "title": "Coarse-to-Fine Decoding for Neural Semantic Parsing",
+  "comments": "Accepted by ACL-18",
+  "version": "v1"
+ },
+ {
+  "id": "1805.01445",
+  "cat": "cs.CL",
+  "year": 2018,
+  "title": "The Fine Line between Linguistic Generalization and Failure in Seq2Seq-Attention Models",
+  "comments": "Workshop on New Forms of Generalization in Deep Learning and NLP (NAACL 2018), revised to update some references",
+  "version": "v1"
+ },
+ {
+  "id": "1911.03828",
+  "cat": "cs.CL",
+  "year": 2019,
+  "title": "Stylized Text Generation Using Wasserstein Autoencoders with a Mixture of Gaussian Prior",
+  "comments": "",
+  "version": "v1"
+ },
+ {
+  "id": "1911.03663",
+  "cat": "cs.CL",
+  "year": 2019,
+  "title": "Style is NOT a single variable: Case Studies for Cross-Style Language Understanding",
+  "comments": "Accepted to ACL 2021",
+  "version": "v1"
+ },
+ {
+  "id": "1911.01188",
+  "cat": "cs.CL",
+  "year": 2019,
+  "title": "Analysing Coreference in Transformer Outputs",
+  "comments": "12 pages, 1 figure",
+  "version": "v1"
+ },
+ {
+  "id": "1811.10870",
+  "cat": "cs.CV",
+  "year": 2018,
+  "title": "Affinity Derivation and Graph Merge for Instance Segmentation",
+  "comments": "Published in ECCV 2018",
+  "version": "v1"
+ },
+ {
+  "id": "1811.10699",
+  "cat": "cs.CV",
+  "year": 2018,
+  "title": "Time-Aware and View-Aware Video Rendering for Unsupervised Representation Learning",
+  "comments": "",
+  "version": "v1"
+ },
+ {
+  "id": "1811.10575",
+  "cat": "cs.CV",
+  "year": 2018,
+  "title": "Stacked Spatio-Temporal Graph Convolutional Networks for Action Segmentation",
+  "comments": "",
+  "version": "v1"
+ },
+ {
+  "id": "1908.07636",
+  "cat": "stat.ML",
+  "year": 2019,
+  "title": "How to gamble with non-stationary $\\mathcal{X}$-armed bandits and have no regrets",
+  "comments": "The algorithm is optimized, the theoretical result is more detailed now",
+  "version": "v1"
+ },
+ {
+  "id": "1908.03367",
+  "cat": "stat.ML",
+  "year": 2019,
+  "title": "Multivariate Convolutional Sparse Coding with Low Rank Tensor",
+  "comments": "",
+  "version": "v1"
+ },
+ {
+  "id": "1908.06698",
+  "cat": "stat.ML",
+  "year": 2019,
+  "title": "Learning to Advertise for Organic Traffic Maximization in E-Commerce Product Feeds",
+  "comments": "accepted by CIKM2019",
+  "version": "v1"
+ },
+ {
+  "id": "2105.15197",
+  "cat": "stat.ML",
+  "year": 2021,
+  "title": "A Simple and General Debiased Machine Learning Theorem with Finite Sample Guarantees",
+  "comments": "Biometrika 2022",
+  "version": "v1"
+ },
+ {
+  "id": "2105.14989",
+  "cat": "stat.ML",
+  "year": 2021,
+  "title": "Representation Learning Beyond Linear Prediction Functions",
+  "comments": "1 Figure",
+  "version": "v1"
+ },
+ {
+  "id": "2105.03584",
+  "cat": "stat.ML",
+  "year": 2021,
+  "title": "Adaptive Latent Space Tuning for Non-Stationary Distributions",
+  "comments": "",
+  "version": "v1"
+ }
+]

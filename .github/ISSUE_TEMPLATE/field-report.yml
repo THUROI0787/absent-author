@@ -1,0 +1,29 @@
+name: Field report
+description: An anonymised case from a review you have finished
+title: "[field report] "
+labels: ["field-report"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Only report reviews that are finished or papers that are public, and anonymise everything: no title, ID, authors or long quotes.
+        Check your venue's confidentiality rules first.
+  - type: input
+    id: venue
+    attributes: { label: Venue and field (vague is fine), placeholder: "e.g. a 2026 ML conference, RL track" }
+  - type: textarea
+    id: evidence
+    attributes: { label: Evidence you saw, description: "Evidence IDs plus short anonymised fragments and rough locations." }
+    validations: { required: true }
+  - type: input
+    id: grade
+    attributes: { label: Your grade, placeholder: "e.g. W2 / R3 / quadrant D, medium confidence" }
+  - type: textarea
+    id: counter
+    attributes: { label: Counter-evidence (H items) }
+  - type: textarea
+    id: outcome
+    attributes: { label: What happened next, description: "AC decision, author response, rebuttal behaviour, if known." }
+  - type: textarea
+    id: lesson
+    attributes: { label: What should change in the list? }

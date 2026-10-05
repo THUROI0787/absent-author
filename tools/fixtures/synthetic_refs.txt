@@ -1,0 +1,12 @@
+IEEE TRANSACTIONS ON SYNTHETIC FIXTURES, VOL. XX, NO. XX, XXXX 1
+A Synthetic PDF-Text Fixture for slop_lint
+Abstract
+This synthetic text was written for slop_lint.py tests. It has a short body and a reference list with planted problems. The body cites prior work [1], [2] and [3]. It is not a real paper.
+1 INTRODUCTION
+We study nothing in particular. The results in this file are invented for testing only, and the reference list below contains deliberately broken entries.
+IEEE TRANSACTIONS ON SYNTHETIC FIXTURES, VOL. XX, NO. XX, XXXX 2
+REFERENCES
+[1] A. Author and B. Author, "A real-looking title," arXiv preprint arXiv:2409.XXXXX, 2024.
+[2] et al., "An entry with no first author," in Proc. Conf., 2021.
+[2] C. Writer, "A duplicated reference number," arXiv:2313.01234, 2023.
+[3] J. Doe, "A person," Journal of Tests, 2020.

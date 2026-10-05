@@ -1,0 +1,36 @@
+name: New evidence
+description: Propose a new observable sign that a paper lacks a responsible human author
+title: "[evidence] "
+labels: ["evidence"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks! An item is useful only if a reviewer can point to it on the page. "It feels like AI" is not evidence.
+        Do not paste text from a submission that is still under review.
+  - type: dropdown
+    id: layer
+    attributes:
+      label: Layer
+      options: ["L language", "S structure / argument", "R research / experiment", "P process / artifacts", "H positive sign of a present author"]
+    validations: { required: true }
+  - type: input
+    id: name
+    attributes: { label: Short name, placeholder: "e.g. Baseline numbers copied from another paper's table" }
+    validations: { required: true }
+  - type: textarea
+    id: pattern
+    attributes: { label: What it looks like, description: "One anonymised example sentence or a description of the pattern." }
+    validations: { required: true }
+  - type: dropdown
+    id: axis
+    attributes:
+      label: Which axis should it count toward?
+      options: ["W (writing left AI-led)", "R (steering / verification absent)", "Q (ordinary quality)", "flag", "not sure"]
+  - type: textarea
+    id: fp
+    attributes: { label: How could an honest human produce the same thing?, description: "Required. At least one false-positive scenario." }
+    validations: { required: true }
+  - type: textarea
+    id: sources
+    attributes: { label: Sources, description: "Venue policy, paper, reviewer post, or your own anonymised case. Social posts count as reader observations." }
