@@ -7,6 +7,7 @@
   <a href="EVIDENCE_CN.md"><img src="https://img.shields.io/badge/证据-83_条-1D2430?style=flat" alt="83 条证据"></a>
   <a href="#两个-skill"><img src="https://img.shields.io/badge/skills-Claude_Code_%C2%B7_Codex-2747C7?style=flat" alt="skills"></a>
   <a href="tools/calibration/calibration_report.md"><img src="https://img.shields.io/badge/lint-79_篇论文校准-2F8F6B?style=flat" alt="校准过的 lint"></a>
+  <a href="https://doi.org/10.5281/zenodo.23165721"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.23165721.svg" alt="DOI"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-5B6675?style=flat" alt="MIT"></a>
 </p>
 
@@ -227,12 +228,17 @@ R09 ★★★ §VI-B   "12.4% of test pairs"        207 的 12.4% = 25.7，不�
 
 Ruoyu Zhao 与 Zhehao Zou 为共同一作，Ruoyu Zhao 为项目负责人。
 
+本项目已在 Zenodo 存档。引用时请用总 DOI [`10.5281/zenodo.23165721`](https://doi.org/10.5281/zenodo.23165721)，它总是指向最新版本；v0.4.0 这一版单独的 DOI 是 [`10.5281/zenodo.23165722`](https://doi.org/10.5281/zenodo.23165722)。
+
 ```bibtex
 @misc{absentauthor2026,
   title        = {Absent Author: Evidence and Skills for Spotting AI-Produced Papers Without a Responsible Human Author},
   author       = {Zhao, Ruoyu and Zou, Zhehao and Zhang, Jinheng and Chen, Yuting and Wu, Jiaqi and Zhu, Chenyu},
   note         = {Ruoyu Zhao and Zhehao Zou contributed equally. Project lead: Ruoyu Zhao},
   year         = {2026},
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.23165721},
+  url          = {https://doi.org/10.5281/zenodo.23165721},
   howpublished = {\url{https://github.com/THUROI0787/absent-author}}
 }
 ```

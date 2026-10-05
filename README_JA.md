@@ -6,6 +6,7 @@
   <a href="https://THUROI0787.github.io/absent-author/?lang=ja"><img src="https://img.shields.io/badge/website-live_demo-2747C7?style=flat" alt="ウェブサイト"></a>
   <a href="EVIDENCE.md"><img src="https://img.shields.io/badge/evidence-83_items-1D2430?style=flat" alt="83 項目の証拠"></a>
   <a href="#2つのスキル"><img src="https://img.shields.io/badge/skills-Claude_Code_%C2%B7_Codex-2747C7?style=flat" alt="スキル"></a>
+  <a href="https://doi.org/10.5281/zenodo.23165721"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.23165721.svg" alt="DOI"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-5B6675?style=flat" alt="MIT"></a>
 </p>
 
@@ -100,7 +101,7 @@ lint は単体でも動きます（Python 3.9 以上、依存なし）：`python
 | Jiaqi Wu | City University of Hong Kong | 3140610478@qq.com |
 | Chenyu Zhu | City University of Hong Kong | zcy20050413@gmail.com |
 
-Ruoyu Zhao と Zhehao Zou は同等に貢献しました。プロジェクトリーダーは Ruoyu Zhao です。参考にした先行研究・ツールへの謝辞は [README.md](README.md#acknowledgements-and-related-work) にあります。
+Ruoyu Zhao と Zhehao Zou は同等に貢献しました。プロジェクトリーダーは Ruoyu Zhao です。Zenodo にアーカイブ済みです。引用には常に最新版を指す DOI [`10.5281/zenodo.23165721`](https://doi.org/10.5281/zenodo.23165721) をお使いください（v0.4.0 単独の DOI は [`10.5281/zenodo.23165722`](https://doi.org/10.5281/zenodo.23165722)）。参考にした先行研究・ツールへの謝辞は [README.md](README.md#acknowledgements-and-related-work) にあります。
 
 ```bibtex
 @misc{absentauthor2026,
@@ -108,6 +109,9 @@ Ruoyu Zhao と Zhehao Zou は同等に貢献しました。プロジェクトリ
   author       = {Zhao, Ruoyu and Zou, Zhehao and Zhang, Jinheng and Chen, Yuting and Wu, Jiaqi and Zhu, Chenyu},
   note         = {Ruoyu Zhao and Zhehao Zou contributed equally. Project lead: Ruoyu Zhao},
   year         = {2026},
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.23165721},
+  url          = {https://doi.org/10.5281/zenodo.23165721},
   howpublished = {\url{https://github.com/THUROI0787/absent-author}}
 }
 ```

@@ -28,6 +28,14 @@ authors:
     affiliation: City University of Hong Kong
     email: zcy20050413@gmail.com
 version: 0.4.0
+doi: "10.5281/zenodo.23165721"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.23165721"
+    description: "Concept DOI (all versions)"
+  - type: doi
+    value: "10.5281/zenodo.23165722"
+    description: "Version 0.4.0"
 date-released: 2026-10-05
 license: MIT
 repository-code: "https://github.com/THUROI0787/absent-author"

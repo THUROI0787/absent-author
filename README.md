@@ -7,6 +7,7 @@
   <a href="EVIDENCE.md"><img src="https://img.shields.io/badge/evidence-83_items-1D2430?style=flat" alt="83 evidence items"></a>
   <a href="#two-skills"><img src="https://img.shields.io/badge/skills-Claude_Code_%C2%B7_Codex-2747C7?style=flat" alt="Skills for Claude Code and Codex"></a>
   <a href="tools/calibration/calibration_report.md"><img src="https://img.shields.io/badge/lint-calibrated_on_79_papers-2F8F6B?style=flat" alt="Calibrated lint"></a>
+  <a href="https://doi.org/10.5281/zenodo.23165721"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.23165721.svg" alt="DOI"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-5B6675?style=flat" alt="MIT license"></a>
 </p>
 
@@ -251,12 +252,17 @@ We thank the authors of the work below. Every source used anywhere in the reposi
 
 Ruoyu Zhao and Zhehao Zou contributed equally. Ruoyu Zhao leads the project.
 
+Archived on Zenodo: cite the concept DOI [`10.5281/zenodo.23165721`](https://doi.org/10.5281/zenodo.23165721), which always resolves to the latest version. Version 0.4.0 alone is [`10.5281/zenodo.23165722`](https://doi.org/10.5281/zenodo.23165722).
+
 ```bibtex
 @misc{absentauthor2026,
   title        = {Absent Author: Evidence and Skills for Spotting AI-Produced Papers Without a Responsible Human Author},
   author       = {Zhao, Ruoyu and Zou, Zhehao and Zhang, Jinheng and Chen, Yuting and Wu, Jiaqi and Zhu, Chenyu},
   note         = {Ruoyu Zhao and Zhehao Zou contributed equally. Project lead: Ruoyu Zhao},
   year         = {2026},
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.23165721},
+  url          = {https://doi.org/10.5281/zenodo.23165721},
   howpublished = {\url{https://github.com/THUROI0787/absent-author}}
 }
 ```
