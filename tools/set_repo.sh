@@ -6,7 +6,7 @@ set -euo pipefail
 OWNER="${1:?usage: tools/set_repo.sh OWNER [REPO]}"; REPO="${2:-absent-author}"
 cd "$(dirname "$0")/.."
 grep -rlE "OWNER(/|\.github\.io/)absent-author" --include='*.md' --include='*.html' --include='*.js' \
-     --include='*.cff' --include='*.yml' --include='*.sh' . | grep -v "tools/set_repo.sh" | while read -r f; do
+     --include='*.cff' --include='*.yml' --include='*.sh' . | grep -v "tools/set_repo.sh" | grep -v ".github/workflows/checks.yml" | while read -r f; do
   sed -i.bak -e "s#OWNER/absent-author#${OWNER}/${REPO}#g" -e "s#OWNER\.github\.io/absent-author#${OWNER}.github.io/${REPO}#g" "$f"
   rm -f "$f.bak"
   echo "updated $f"

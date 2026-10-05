@@ -18,5 +18,5 @@ jobs:
         run: python tools/build_site_data.py
       - name: Repository owner placeholder has been replaced (run tools/set_repo.sh)
         run: |
-          if grep -rn "THUROI0787/absent-author\|OWNER.github.io" --include='*.md' --include='*.html' --include='*.js' --include='*.cff' --include='*.yml' . | grep -v "tools/set_repo.sh" | grep -v "checks.yml"; then
+          if grep -rnE "OWNER(/|[.]github[.]io/)absent-author" --include='*.md' --include='*.html' --include='*.js' --include='*.cff' --include='*.yml' . | grep -v "tools/set_repo.sh" | grep -v "checks.yml"; then
             echo "::error::Run tools/set_repo.sh <your-github-name> to replace the OWNER placeholder"; exit 1; fi
