@@ -204,5 +204,51 @@ class TestReportedFalsePositives(unittest.TestCase):
         self.assertGreater(c["S01"]["count"], 0)
 
 
+class TestNonAuthorSections(unittest.TestCase):
+    def test_prompt_and_checklist_sections_are_excluded(self):
+        with tempfile.TemporaryDirectory() as d:
+            p = os.path.join(d, "t.tex")
+            with open(p, "w") as fh:
+                fh.write("\\documentclass{article}\\begin{document}\n\\section{Method}\nWe train a model.\n\n"
+                         "\\appendix\n\\section{Prompts}\n\\subsection{Stage 1}\nRevolutionary groundbreaking design! "
+                         "So, what does this mean? Let's take a closer look.\n\n"
+                         "\\section{NeurIPS Paper Checklist}\nDo the main claims made in the abstract reflect the scope?\n\n"
+                         "\\section{Extra Results}\nRevolutionary results.\n\\end{document}\n")
+            r = SL.analyze(p)
+            self.assertTrue(any("Prompts" in t for t in r["excluded_sections"]))
+            self.assertEqual(r["checks"]["L16"]["count"], 0)
+            # text after the excluded sections is still scanned
+            self.assertGreater(r["checks"]["L07"]["count"], 0)
+            # no blank line before \section: the paragraph straddles the heading
+            p3 = os.path.join(d, "u.tex")
+            with open(p3, "w") as fh:
+                fh.write("\\documentclass{article}\\begin{document}\n\\section{Method}\nWe train a model.\n"
+                         "\\appendix\n\\section{Prompts}\nSo, what does this mean? Isn't it amazing?\n"
+                         "\\end{document}\n")
+            self.assertEqual(SL.analyze(p3)["checks"]["L16"]["count"], 0)
+            # PDF text: numbered checklist items and A.1/A.2 sub-headings all parse as level-1 headings
+            p4 = os.path.join(d, "v.txt")
+            with open(p4, "w") as fh:
+                fh.write("Title\n\n1 Introduction\nWe train a model on data.\n\nA Prompts\n\nA.1 Mutation\n"
+                         "So, what does this mean?\n\nA.2 Crossover\nIsn't it amazing?\n\n"
+                         "B NeurIPS Paper Checklist\n\n1. Claims\nQuestion: Do the main claims reflect the scope?\n\n"
+                         "2. Limitations\nQuestion: Does the paper discuss the limitations?\n\n"
+                         "C Extra Results\nRevolutionary results. Why does this work?\n")
+            r4 = SL.analyze(p4)
+            self.assertEqual(r4["checks"]["L16"]["count"], 1)  # only the question in "C Extra Results"
+            r2 = SL.analyze(p, default_excludes=False)
+            self.assertEqual(r2["excluded_sections"], [])
+            self.assertGreater(r2["checks"]["L16"]["count"], 0)
+
+
+class TestPromptHeadingScope(unittest.TestCase):
+    def test_main_text_prompt_section_is_kept(self):
+        self.assertFalse(SL.NON_AUTHOR_SECTION_RX.search("Prompt Optimization"))
+        self.assertFalse(SL.NON_AUTHOR_SECTION_RX.search("Prompting strategies"))
+        for t in ("Prompts", "Appendix: Prompts", "A.3 Prompts used in the search", "System prompt",
+                  "Prompt templates", "NeurIPS Paper Checklist"):
+            self.assertTrue(SL.NON_AUTHOR_SECTION_RX.search(t), t)
+
+
 if __name__ == "__main__":
     unittest.main()

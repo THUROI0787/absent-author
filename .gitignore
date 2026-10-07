@@ -3,3 +3,5 @@ __pycache__/
 .DS_Store
 lint.md
 tools/calibration/corpus/
+
+.ref_cache.json

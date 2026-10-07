@@ -27,7 +27,7 @@ authors:
     given-names: Chenyu
     affiliation: City University of Hong Kong
     email: zcy20050413@gmail.com
-version: 0.4.1
+version: 0.5.0
 doi: "10.5281/zenodo.23165721"
 identifiers:
   - type: doi

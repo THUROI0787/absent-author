@@ -36,7 +36,7 @@ import re
 import sys
 from typing import Dict, List, Optional, Tuple
 
-VERSION = "0.2.1"
+VERSION = "0.3.0"
 
 # ---------------------------------------------------------------------------
 # Calibration (written by tools/calibration/run_calibration.py --write-tool).
@@ -732,6 +732,68 @@ def load(path: str) -> Doc:
     return doc
 
 
+# Text the authors did not write as prose: prompt dumps printed in an appendix, venue checklist
+# questions, statement templates. Counting it inflates L07/L16/P07 and similar checks (feedback 2026-10-07).
+NON_AUTHOR_SECTION_RX = re.compile(
+    # dump-style titles only: "Prompts", "A.3 Prompts used in ...", "System prompt", "Prompt templates";
+    # a main-text section such as "Prompt Optimization" is author prose and stays in
+    r"^(?:appendix\s*[:.]?\s*)?(?:[A-Z](?:\.\d+)*\.?\s+|\d+(?:\.\d+)*\.?\s+)?"
+    r"(?:(?:full|all|llm|agent|system|user|evaluation|judge|example)\s+)?prompts?"
+    r"(?:\s+(?:used\b.*|templates?|text|details|for\b.*|in\b.*))?\s*$|"
+    r"\bchecklist\b|broader\s+impact\s+statement\s+template", re.I)
+# NeurIPS-style checklist item titles; in PDF text they look like top-level numbered headings.
+CHECKLIST_ITEM_RX = re.compile(
+    r"^(claims|limitations|theory|experiment(al)?\b|open\s+access|code\s+of\s+ethics|broader\s+impacts?|"
+    r"safeguards|licen[sc]es|new\s+assets|crowdsourcing|institutional\s+review|declaration\s+of\s+llm|llm\s+usage)",
+    re.I)
+_HEAD_NUM_PREFIX = re.compile(r"^\s*((?:\d+|[A-H])(?:\.\d+)*)\.?\s+[A-Z]")
+
+
+def exclude_non_author_sections(doc: Doc, extra_rx: Optional[str] = None, default: bool = True) -> List[str]:
+    """Drop paragraphs under headings that hold non-author text (and their sub-headings).
+    Returns the excluded heading titles, reported at the top of the lint report."""
+    rxs = ([NON_AUTHOR_SECTION_RX] if default else []) + ([re.compile(extra_rx, re.I)] if extra_rx else [])
+    if not rxs or not doc.headings:
+        return []
+    heads = sorted(doc.headings)
+    ranges, titles = [], []
+
+    def prefix(li):  # "A.1" / "3.2" numbering of a plain-text heading line (txt headings are all level 1)
+        m = _HEAD_NUM_PREFIX.match(doc.raw_lines[li]) if li < len(doc.raw_lines) else None
+        return m.group(1) if m else None
+
+    for k, (li, lvl, t) in enumerate(heads):
+        if any(rx.search(t) for rx in rxs):
+            pf, is_ck = prefix(li), bool(re.search(r"checklist", t, re.I))
+
+            def ends_range(l2, lv2, t2):
+                if lv2 > lvl:
+                    return False
+                p2 = prefix(l2)
+                if pf and p2 and p2.startswith(pf + "."):
+                    return False  # numbered child (A.2 under A) in PDF text
+                # "1. Claims", "2. Limitations", ... (but not a lettered appendix such as "A Experimental details")
+                return not (is_ck and CHECKLIST_ITEM_RX.match(t2) and (p2 is None or p2[0].isdigit()))
+            end = next((l2 for l2, lv2, t2 in heads[k + 1:] if ends_range(l2, lv2, t2)), float("inf"))
+            ranges.append((li, end))
+            titles.append(t)
+    if not ranges:
+        return []
+    def inside(li):
+        return any(a <= li < b for a, b in ranges)
+    kept = []
+    for p in doc.paras:  # filter per source line: a paragraph can straddle a heading with no blank line
+        flags = [inside(li) for li in p.lines]
+        if not any(flags):
+            kept.append(p)
+        elif not all(flags):
+            ends = p.starts[1:] + [len(p.text) + 1]
+            pieces = [(li, p.text[s:e - 1]) for li, s, e, f in zip(p.lines, p.starts, ends, flags) if not f]
+            kept.append(Para(pieces, p.section, p.kind))
+    doc.paras = kept
+    return titles
+
+
 def _bbl_keys(text: str) -> set:
     keys = set(re.findall(r"\\bibitem\s*(?:\[(?:[^\[\]]|\[[^\]]*\])*\])?\s*\{([^}]+)\}", text))
     keys |= set(re.findall(r"\\entry\{([^}]+)\}", text))
@@ -1287,8 +1349,8 @@ class Analysis:
         if weak:
             r["weak_subpatterns"] = list(weak)
         r["per_1k"] = self.per1k(r["count"])
-        if sections:
-            r["by_section"] = sec_hits
+        # always report where hits sit, so text that is not author prose stands out (feedback 2026-10-07)
+        r["by_section"] = sec_hits
         return hits
 
 
@@ -2676,8 +2738,10 @@ def band(r: dict) -> str:
     return "elevated" if v <= c["p99"] else "high"
 
 
-def analyze(path: str, max_examples: int = 5, source: bool = False) -> dict:
+def analyze(path: str, max_examples: int = 5, source: bool = False, exclude_regex: Optional[str] = None,
+            default_excludes: bool = True) -> dict:
     doc = load(path)
+    excluded = exclude_non_author_sections(doc, exclude_regex, default_excludes)
     a = Analysis(doc, max_examples=max_examples, source=source)
     for fn in CHECKS:
         fn(a)
@@ -2687,6 +2751,7 @@ def analyze(path: str, max_examples: int = 5, source: bool = False) -> dict:
         "title": doc.title, "prose_words": a.n_words, "sentences": len(a.sentences),
         "paragraphs": len(doc.paras), "sections": [t for _, lvl, t in doc.headings if lvl <= 1][:40],
         "calibration": CALIBRATION_META, "checks": {},
+        "excluded_sections": excluded,
     }
     for cid, r in a.results.items():
         r["band"] = band(r)
@@ -2739,6 +2804,9 @@ def to_markdown(res: dict, show_source: bool = False) -> str:
     if meta:
         L.append(f"- Calibration: {meta.get('date', '?')}, human baseline n={meta.get('n_human', '?')}, "
                  f"AI-heavy set n={meta.get('n_ai', '?')} (bands: typical <= human p90 < elevated <= p99 < high)")
+    if res.get("excluded_sections"):
+        L.append("- **Excluded as non-author text** (prompt dumps, checklists; use --no-default-excludes to keep): "
+                 + "; ".join(res["excluded_sections"][:10]))
     if res.get("warning"):
         L.append(f"- **Warning:** {res['warning']}")
     L.append("")
@@ -2837,13 +2905,17 @@ def main(argv=None):
                          "(P06 itself always runs when the source has comments)")
     ap.add_argument("--max-examples", type=int, default=5)
     ap.add_argument("-o", "--output", help="write report to this file instead of stdout")
+    ap.add_argument("--exclude-regex", help="also skip sections whose heading matches this regex "
+                                            "(e.g. 'rebuttal|dataset card')")
+    ap.add_argument("--no-default-excludes", action="store_true",
+                    help="do not skip prompt-dump / checklist sections (skipped by default)")
     args = ap.parse_args(argv)
     results = []
     for p in args.paths:
         if not os.path.exists(p):
             print(f"slop_lint: no such path: {p}", file=sys.stderr)
             continue
-        results.append(analyze(p, args.max_examples, args.source))
+        results.append(analyze(p, args.max_examples, args.source, args.exclude_regex, not args.no_default_excludes))
     if args.format == "json":
         text = json.dumps(results if len(results) != 1 else results[0], indent=1, ensure_ascii=False)
     else:

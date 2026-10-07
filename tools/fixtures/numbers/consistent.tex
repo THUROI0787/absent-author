@@ -1,0 +1,58 @@
+% SYNTHETIC FIXTURE for number_ledger.py tests. All numbers are mutually consistent. Not a real paper.
+\documentclass{article}
+\title{Evolutionary Search for Efficient Attention}
+\begin{document}
+\maketitle
+\begin{abstract}
+We run an evolutionary architecture search for 21 days and improve accuracy from 73.1 to 78.0 (+4.9 points), a 6.7\% relative improvement \citep{smith2024,lee2023}.
+\end{abstract}
+
+\section{Introduction}
+Since 2024, search methods have scaled \cite{lee2023}. Our search runs for 21 days (Section~\ref{sec:method}, Figure~\ref{fig:a}, Eq.~(\ref{eq:loss})). We use ResNet-50 and CIFAR-10 as references and GPT-4 as a judge.
+
+\section{Method}
+\label{sec:method}
+Each round keeps $K = 16$ elites and we run 6 iterations. As described in Section 3.2 and Table 1, the search uses 4 GPUs for 21 days, i.e. $4 \times 504 = 2{,}016$ GPU-hours. In a pilot, 12.5\% of 200 runs diverged. The fingerprint has 12 + 6 + 3 = 21 features.
+\begin{equation}
+\mathcal{L} = 0.5 \|x\|^2 + 3 \label{eq:loss}
+\end{equation}
+
+\begin{figure}[t]
+\caption{Selection keeps the 16 elites with the highest fitness after each of the 6 iterations.}
+\label{fig:a}
+\end{figure}
+
+\begin{table}[t]
+\caption{Compute budget.}
+\begin{tabular}{lc}
+\toprule
+Stage & GPU-hours \\
+\midrule
+Search & 1,536 \\
+Evaluation & 480 \\
+Total & 2,016 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Results}
+\begin{table}[t]
+\caption{Accuracy per benchmark.}
+\begin{tabular}{lcccc}
+\toprule
+Method & A & B & C & Avg \\
+\midrule
+Baseline & 70.0 & 72.0 & 74.0 & 72.0 \\
+Ours & 76.0 & 78.0 & 80.0 & 78.0 \\
+\bottomrule
+\end{tabular}
+\end{table}
+The search over 21 days used 16 elites per round, as stated above.
+
+\appendix
+\section{System prompt}
+You are a helpful assistant. Run 5 iterations and keep 3 elites. Use 99 GPUs.
+
+\section{NeurIPS Paper Checklist}
+Answer: [Yes]. We ran 4 iterations with 1 seed.
+\end{document}

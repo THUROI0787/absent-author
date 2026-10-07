@@ -38,11 +38,16 @@ Use paper-author-pass on paper/ in audit mode. I'll answer your questions.
 Use paper-slop-screen to triage this arXiv preprint: <path or id>
 ```
 
-The lint also runs on its own (Python 3.9+, no dependencies):
+The lint also runs on its own (Python 3.9+, no dependencies), and three helpers do the slow verification work:
 
 ```bash
-python tools/slop_lint.py paper/ --source -o lint.md
+python tools/slop_lint.py paper/ --source -o lint.md       # surface traces; skips prompt dumps and checklists
+python tools/ref_verify.py refs.bib --sample 5 --mailto you@example.org   # every author, incl. the last
+python tools/number_ledger.py paper/main.tex                # same quantity stated with different values
+python tools/pdf_hidden_text.py paper.pdf                   # hidden or remapped text (pip install pymupdf)
 ```
+
+All four report candidates for a person to read, never verdicts. Optional system tools: `poppler-utils` (pdftotext, pdftoppm) and `tesseract` (OCR check for remapped text).
 
 > [!IMPORTANT]
 > Before you run the screen on a submission **under review**, check your venue's reviewer LLM policy. ICML 2026 desk-rejected 497 papers linked to reviewers who broke the no-LLM policy they had chosen. The skill asks you to confirm this first.
@@ -213,6 +218,9 @@ docs/field_reports/            anonymised reviewer cases and the false-positive 
 skills/paper-author-pass/      writing-side skill
 skills/paper-slop-screen/      review-side skill
 tools/slop_lint.py             deterministic surface-trace lint (candidates only)
+tools/ref_verify.py            reference checker: multi-source lookup, full author-list comparison
+tools/number_ledger.py         quantities stated with different values; arithmetic and table recomputation
+tools/pdf_hidden_text.py       invisible, out-of-page or remapped PDF text; venue canary vs. author source
 tools/calibration/             corpus IDs, results and the reproduction script
 tools/sync_evidence.py         syncs the list into both skills and checks ID coverage
 tools/figures/                 regenerates assets/*.svg

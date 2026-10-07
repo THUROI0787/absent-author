@@ -62,20 +62,20 @@ Keyed to `evidence-catalog.md` (its "Grading" section is the authoritative gradi
 | R22 | Hollow math | read theorems; check cited lemmas | trivial theorem / definition-as-theorem (★★); nonexistent cited lemma (☠) | R/Q |
 | P01 | Chatbot residue | lint P01 + PDF search | any confirmed | ⚑ ☠ |
 | P02 | Placeholders | lint P02-meta / P02-todo + PDF | P02-meta (LLM meta-comment, PLEASE FILL…) confirmed = ⚑ ☠; P02-todo (TODO, (?), ??) = ★ only | ⚑ / R |
-| P03 | Hallucinated refs | verify all intro refs + ≥10 random others | any confirmed nonexistent or fabricated author list | ⚑ ☠ |
+| P03 | Hallucinated refs | `scripts/ref_verify.py` + verify all intro refs + ≥10 others, including ≥2 long-author-list papers; compare every author, including the last | any confirmed nonexistent or fabricated author list (incl. head-correct, tail-fabricated) | ⚑ ☠ |
 | P04 | Misattribution | open cited abstracts for key claims | ≥2 instances | Q |
 | P05 | Pipeline watermark | lint P05 + PDF | any | ⚑ ☠ |
 | P06 | Source residue | arXiv source if public; lint --source | literal pipeline strings only (DATA_NEEDED, [VERIFY], Sakana-style per-paragraph plan blocks) = ★★★; ordinary comments and S2-style bib keys do NOT count; co-author notes are H06 | R |
-| P07 | Code identifiers | lint P07 + figures | run IDs / snake_case in prose or legends | R |
-| P08 | AI-figure traces | inspect figures | garbled text (★★★), diagram–method mismatch, duplicates | R |
+| P07 | Code identifiers / orphan names | lint P07 + figures; list model/framework names that appear only once or twice and are never defined | run IDs / snake_case in prose or legends; earlier-draft names left in captions, checklist or appendix | R |
+| P08 | AI-figure traces | render pages and inspect figures (caption vs. legend vs. text) | garbled text in the rendered figure (★★★; garbled extracted text alone is a font artifact), diagram–method mismatch, duplicates | R |
 | P09 | Author can't defend | rebuttal / discussion phase | generic, non-responsive rebuttal | R |
 | P10 | AI statement | check statement vs. evidence | missing where required, or contradicted | ⚑ (policy) |
 | P11 | Batch production | usually not visible to reviewers; AC level | — | i (AC note) |
-| P12 | Prompt injection | search for hidden text (select-all in PDF) | any | ⚑ misconduct (strength "⚑ 不端", not ☠: evidence of a present author acting badly) |
+| P12 | Prompt injection | `scripts/pdf_hidden_text.py` (invisible, out-of-page, remapped text, font anomalies, instruction-like text); then classify the source: venue stamp area vs. body | author-inserted text in body/figures/references; a venue canary is input hygiene, not P12 | ⚑ misconduct (strength "⚑ 不端", not ☠: evidence of a present author acting badly) |
 | P13 | Pipeline files | inspect supplement / anonymous repo; lint P13 (info) | present and undisclosed → supports P10 | i/⚑ |
 | P14 | Code ≠ paper | compare paper hyperparameters/splits/metrics with code defaults | clear mismatch on something the claims depend on | R ★★★ |
 | P15 | Anachronisms | check model versions/facts | nonexistent model / knowledge-cutoff text (☠); wrong baseline facts (★★) | ⚑/R |
-| P16 | Checklist boilerplate | compare checklist answers to the paper | contradiction (★★★); generic boilerplate (★★) | R |
+| P16 | Checklist boilerplate | read every checklist justification against the paper; follow each "Section X / Appendix Y / Table Z" pointer | contradiction (★★★); generic boilerplate (★★) | R |
 | P17 | Cross-submission similarity | AC/PC only | shared skeleton/configs/coinage style across a batch | R (AC) |
 | P18 | Rebuttal anomalies | discussion phase | new numbers contradict paper; contradictory promises; answering unasked questions | R |
 | H01–H09 | Human presence | actively search; quote | prose-only H (H01–H04, H07, H08) can downgrade one ★★ finding it directly answers; artifact H (H05, H06, H09) can cancel a finding it directly answers; nothing cancels a verified ⚑ | counter-evidence |

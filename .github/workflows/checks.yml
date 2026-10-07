@@ -14,6 +14,10 @@ jobs:
         run: python tools/sync_evidence.py --check
       - name: Lint unit tests
         run: python tools/test_slop_lint.py
+      - name: Reference, number and hidden-text tool tests
+        run: |
+          pip install pymupdf
+          python -m unittest tools/test_ref_verify.py tools/test_number_ledger.py tools/test_pdf_hidden_text.py
       - name: Site data builds
         run: python tools/build_site_data.py
       - name: Repository owner placeholder has been replaced (run tools/set_repo.sh)

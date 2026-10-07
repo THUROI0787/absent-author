@@ -19,6 +19,8 @@ ROOT = Path(__file__).resolve().parent.parent
 EVIDENCE = ROOT / "EVIDENCE.md"
 EVIDENCE_CN = ROOT / "EVIDENCE_CN.md"
 LINT = ROOT / "tools" / "slop_lint.py"
+# stdlib/optional-dependency scripts shipped inside both skills
+SCRIPTS = [LINT] + [ROOT / "tools" / n for n in ("ref_verify.py", "number_ledger.py", "pdf_hidden_text.py")]
 INDEX_EN = ROOT / "docs" / "evidence-index-en.md"
 SKILLS = {
     "paper-author-pass": ROOT / "skills" / "paper-author-pass" / "references" / "polish-actions.md",
@@ -91,7 +93,8 @@ def main():
                 (skill_dir / "references" / "evidence-index-en.md").write_text(INDEX_HEADER + idx_text,
                                                                                encoding="utf-8")
             (skill_dir / "scripts").mkdir(parents=True, exist_ok=True)
-            shutil.copy2(LINT, skill_dir / "scripts" / "slop_lint.py")
+            for sc in SCRIPTS:
+                shutil.copy2(sc, skill_dir / "scripts" / sc.name)
         else:
             expected = {
                 "references/evidence-catalog.md": HEADER.format(src="EVIDENCE.md") + delink(ev_text),
@@ -102,9 +105,10 @@ def main():
                 f = skill_dir / rel
                 if not f.exists() or f.read_text(encoding="utf-8") != want:
                     problems.append(f"{skill}/{rel} is out of date: run python tools/sync_evidence.py")
-            lint_copy = skill_dir / "scripts" / "slop_lint.py"
-            if not lint_copy.exists() or lint_copy.read_bytes() != LINT.read_bytes():
-                problems.append(f"{skill}/scripts/slop_lint.py is out of date: run python tools/sync_evidence.py")
+            for sc in SCRIPTS:
+                copy = skill_dir / "scripts" / sc.name
+                if not copy.exists() or copy.read_bytes() != sc.read_bytes():
+                    problems.append(f"{skill}/scripts/{sc.name} is out of date: run python tools/sync_evidence.py")
         act_ids = ids_in(actions.read_text(encoding="utf-8")) if actions.exists() else set()
         missing = sorted(ev_ids - act_ids)
         extra = sorted(act_ids - ev_ids)

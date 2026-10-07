@@ -7,9 +7,9 @@ For a one-line English definition of every evidence ID, see `evidence-index-en.m
 ## The 8 highest-yield checks (in order; in the first 15 minutes do 1–4, the rest as needed)
 | # | Check | How (1–3 min each) | IDs |
 |---|---|---|---|
-| 1 | References | Pick 5 you don't recognize. Look up **title and author list** on OpenAlex, DBLP or Semantic Scholar. Flag invented author lists, nonexistent papers, and `XXXX` arXiv IDs | P03 P04 |
-| 2 | Headline numbers | Find every abstract/intro number in the tables. Recompute "+x%". Check that the same config has the same number in every table and that percentages × n come out as integers | R09 R17 |
-| 3 | Promised vs. delivered | List every analysis, metric and technique mentioned, then check whether its result appears | R07 R08 S12 |
+| 1 | References | Pick 5: 3 you don't recognize and 2 well-known papers with long author lists (LLMs often get the head right and invent the tail). Look up **title and the full author list, including the last author** (`scripts/ref_verify.py` automates this). Flag invented author lists, nonexistent papers, and `XXXX` arXiv IDs | P03 P04 |
+| 2 | Headline numbers | Find every abstract/intro number in the tables. Recompute "+x%". Check that the same config has the same number in every table and that percentages × n come out as integers (`scripts/number_ledger.py` lists quantities stated with different values) | R09 R17 |
+| 3 | Promised vs. delivered | List every analysis, metric and technique mentioned, then check whether its result appears. For NeurIPS/ICML/ICLR, read the checklist justifications against the paper (seeds, error bars, compute, limitations, LLM use, every section they point to) | R07 R08 S12 P16 |
 | 4 | Pivot | Is the title/abstract "audit / diagnostic / pitfalls / contrary to expectations" while the body is still a method paper (a proposed component, its ablations, an unused acronym)? | R01 |
 | 5 | Scale vs. claims | Compare model size, data, seeds and compute with claim wording ("LLMs", "generalizes") | R04 R18 |
 | 6 | Any human decision | Look for one "we chose X over Y because…" or one inspectable concrete example | H01 H05 |

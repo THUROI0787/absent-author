@@ -1,0 +1,51 @@
+% SYNTHETIC FIXTURE for number_ledger.py tests. Numbers are deliberately inconsistent. Not a real paper.
+\documentclass{article}
+\title{Evolutionary Search for Efficient Attention}
+\begin{document}
+\maketitle
+\begin{abstract}
+We run an evolutionary architecture search for $\sim$1 month and find a model that improves accuracy from 73.1 to 78.0, a 16\% improvement over the baseline \citep{smith2024}.
+\end{abstract}
+
+\section{Introduction}
+Our search takes $\sim$1 month on a shared cluster. Prior work in 2023 used far less compute (Section~\ref{sec:method}).
+
+\section{Method}
+\label{sec:method}
+The search ran for $\sim$3 weeks in total. In every round we keep $K = 16$ elites and run 6 iterations of mutation. The total compute was 160 GPUs for 21 hours. Of the 207 runs, 12.4\% of 207 diverged. The fingerprint has 12 + 6 + 3 = 21 features.
+
+\begin{figure}[t]
+\caption{Selection keeps the 12 elites with the highest fitness after each round (Figure 2).}
+\end{figure}
+
+\begin{table}[t]
+\caption{Compute budget.}
+\begin{tabular}{lc}
+\toprule
+Stage & GPU-hours \\
+\midrule
+Search & 2,400 \\
+Evaluation & 480 \\
+Total & 2,880 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Results}
+\begin{table}[t]
+\caption{Accuracy per benchmark.}
+\begin{tabular}{lcccc}
+\toprule
+Method & A & B & C & Avg \\
+\midrule
+Baseline & 70.0 & 72.0 & 74.0 & 72.0 \\
+Ours & 76.0 & 78.0 & 80.0 & 81.0 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Our fitness score is 0.68 vs 0.42 for the baseline, a 3$\times$ gain of 4.5 points. In the ablation, the 4 + 10 + 7 = 21 features are split by type.
+
+\section*{References}
+Smith et al. 2024. Something with 99 pages and 3 volumes.
+\end{document}

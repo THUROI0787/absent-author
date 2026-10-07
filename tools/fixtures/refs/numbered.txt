@@ -1,0 +1,18 @@
+6 Conclusion
+We conclude nothing; this is a synthetic fixture for ref_verify.py.
+References
+[1] A. Vaswani, N. Shazeer, N. Parmar, J. Uszkoreit, L. Jones, A. N. Gomez,
+L. Kaiser, and I. Polosukhin, "Attention is all you need," in Advances in Neural
+Information Processing Systems, 2017.
+[2] M. Davies, A. Wild, G. Orchard, Y. Sandamirskaya, G. A. F. Guerra, P. Joshi,
+P. Plank, and S. R. Risbud, "Advancing neuromorphic computing with Loihi: A
+survey of results and outlook," Proceedings of the IEEE, vol. 109, no. 5, pp.
+911–934, 2021, doi: 10.1109/JPROC.2021.3067593.
+12
+[3] K. He, X. Zhang, S. Ren, and J. Sun, "Deep residual learning for image recog-
+nition," in Proc. IEEE Conf. Comput. Vis. Pattern Recognit., 2016, pp. 770–778.
+[4] J. Kaplan, S. McCandlish, T. Henighan, T. B. Brown, B. Chess, R. Child,
+S. Gray, A. Radford, J. Wu, and D. Amodei, "Scaling laws for neural language
+models," arXiv preprint arXiv:2001.08361, 2020.
+[5] D. P. Kingma and J. Ba, "Adam: A method for stochastic optimization," in
+International Conference on Learning Representations (ICLR), 2015.

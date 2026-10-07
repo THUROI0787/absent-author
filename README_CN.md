@@ -38,11 +38,16 @@ git clone https://github.com/THUROI0787/absent-author.git && cd absent-author
 用 paper-slop-screen 对这篇 arXiv 预印本做 triage：<路径或 ID>
 ```
 
-lint 也可以单独运行（Python 3.9+，无依赖）：
+lint 也可以单独运行（Python 3.9+，无依赖）。另有三个辅助脚本，承担最费时的核查工作：
 
 ```bash
-python tools/slop_lint.py paper/ --source -o lint.md
+python tools/slop_lint.py paper/ --source -o lint.md       # 表层痕迹；默认跳过 prompt 原文和 checklist
+python tools/ref_verify.py refs.bib --sample 5 --mailto you@example.org   # 逐个比对作者，包括末位
+python tools/number_ledger.py paper/main.tex                # 同一个量在不同地方给出不同的值
+python tools/pdf_hidden_text.py paper.pdf                   # 隐藏或重映射的文字（需 pip install pymupdf）
 ```
+
+四个工具输出的都是候选，需要人来读，不是结论。可选的系统工具：`poppler-utils`（pdftotext、pdftoppm）和 `tesseract`（用 OCR 检查重映射文字）。
 
 > [!IMPORTANT]
 > 对**在审**论文运行筛查之前，请先确认会议的审稿人 LLM 政策。ICML 2026 因审稿人违反自选的禁用 LLM 政策，desk reject 了 497 篇关联投稿。skill 会先请你确认这一点。

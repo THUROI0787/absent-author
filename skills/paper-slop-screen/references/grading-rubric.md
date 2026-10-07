@@ -17,13 +17,15 @@ The authoritative definitions of W/R/Q, flags, auditability and quadrants are in
 - **W2**: families co-occur: L-cluster ≥3; or ≥2 reviewer-salient L items + ≥1 of S01/S05/S06; or ≥3 W-axis S findings from different families (e.g., F1, S06, S08).
 - **W3**: W2, and F1 defensive/apologetic caveats (S01/S16 on the W axis) in ≥3 sections, or AI-led traces pervasive throughout.
 
+If the language layer is clean (L-cluster ≤1) and W2 rests only on S-layer structure items, write "W2 (structure only)" in the verdict card so readers know the prose itself is not the problem. Empty headings and stub subsections ("See Fig. X." and nothing else) are unfinished artifacts: count them as P02 (TODO form, ★, R axis), not as S08.
+
 S02 and S03 are R-axis items and do not enter W.
 
 ## 3. R — research steering / verification absent
-- **R0**: no R-axis finding (higher confidence when artifact-backed H evidence exists).
+- **R0**: no R-axis finding (higher confidence when artifact-backed H evidence exists). State "numbers verified: n checked / n consistent": R0 resting on many recomputed numbers is worth more than R0 resting on not having looked.
 - **R1**: 1–2 ★/★★ R-axis findings (note whether H evidence explains them).
 - **R2**: one verified ★★★, or ≥3 ★★ from different families.
-- **R3**: any of (a) pivot/construct signature (R01, R02, R03 with inflated claims) + any verification failure (R07–R10, R17, P14, P15); (b) ≥2 verified verification failures of different types; (c) ≥3 ★★★ from different families — **and** no artifact-backed H item (H05, H06, H09) that directly answers them.
+- **R3**: any of (a) pivot/construct signature (R01, R02, R03 with inflated claims) + any verification failure (R07–R10, R17, P14, P15); (b) ≥2 verified verification failures of different types (a type is an evidence ID: R07, R08, R09, R10, R17, P14, P15, P16 each count once; many contradictions under R09 are one type and only decide whether R09 is ★ or ★★★); (c) ≥3 ★★★ from different families — **and** no artifact-backed H item (H05, H06, H09) that directly answers them.
 
 **H weighting.** Prose-only H items can downgrade one ★★ finding they directly answer; they never cancel ★★★ or ⚑. Artifact-backed H can cancel a finding they directly answer (e.g., a timestamped pre-registration answers R01; released logs showing the analysis was run answer R07 only if the result is then reported). Nothing cancels a verified ⚑.
 
@@ -31,7 +33,7 @@ S02 and S03 are R-axis items and do not enter W.
 Normal review judgment. Determines the score. Does not enter the absence narrative: a W0/R0 paper with poor Q is just a weak paper.
 
 ## 5. Flags ⚑ (separate; each personally verified)
-Verified ☠: P01 residue (incl. agent notes printed in the bibliography); P02-meta LLM placeholder/meta-comment; P03 fabricated reference (wrong authors/title, not just year/venue; checked in ≥2 databases); P05 watermark / LLM author line; P15 knowledge-cutoff text / nonexistent model; R16 AI-review score in the paper; R22 nonexistent cited lemma. Separately: P12 prompt injection (⚑ misconduct, not ☠ — evidence of a *present* author acting badly). Plus P10 policy violation.
+Verified ☠: P01 residue (incl. agent notes printed in the bibliography); P02-meta LLM placeholder/meta-comment; P03 fabricated reference (wrong authors/title, not just year/venue; checked in ≥2 databases); P05 watermark / LLM author line; P15 knowledge-cutoff text / nonexistent model; R16 AI-review score in the paper; R22 nonexistent cited lemma. Separately: P12 prompt injection (⚑ misconduct, not ☠ — evidence of a *present* author acting badly; venue canaries are input hygiene, not P12). Plus P10 policy violation.
 
 ## 6. Auditability
 A+ runnable code + configs + full logs (incl. failures) + specific AI statement or version history · A code + statement · A0 text only. **If R is uncertain and auditability is A+, recommend checking the logs rather than guessing.** Auditability never cancels a ⚑.

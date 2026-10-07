@@ -1,0 +1,34 @@
+References
+
+Davies, M., Wild, A., Orchard, G., Sandamirskaya, Y., Guerra, G. A. F., Joshi, P.,
+Plank, P., & Risbud, S. R. (2021). Advancing neuromorphic computing with Loihi:
+A survey of results and outlook. Proceedings of the IEEE, 109(5), 911–934.
+He, K., Zhang, X., Ren, S., & Sun, J. (2016). Deep residual learning for image
+recognition. In Proceedings of the IEEE Conference on Computer Vision and Pattern
+Recognition (pp. 770–778).
+Kingma, D. P., & Ba, J. (2015). Adam: A method for stochastic optimization. In
+International Conference on Learning Representations.
+
+van der Maaten, L., & Hinton, G. (2008). Visualizing data using t-SNE. Journal of
+Machine Learning Research, 9, 2579–2605.
+Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N.,
+Kaiser, L., & Polosukhin, I. (2017). Attention is all you need. In Advances in
+Neural Information Processing Systems 30.
+
+Appendix
+
+References
+
+Davies, M., Wild, A., Orchard, G., Sandamirskaya, Y., Guerra, G. A. F., Joshi, P.,
+Plank, P., & Risbud, S. R. (2021). Advancing neuromorphic computing with Loihi:
+A survey of results and outlook. Proceedings of the IEEE, 109(5), 911–934.
+He, K., Zhang, X., Ren, S., & Sun, J. (2016). Deep residual learning for image
+recognition. In Proceedings of the IEEE Conference on Computer Vision and Pattern
+Recognition (pp. 770–778).
+Kingma, D. P., & Ba, J. (2015). Adam: A method for stochastic optimization. In
+International Conference on Learning Representations.
+van der Maaten, L., & Hinton, G. (2008). Visualizing data using t-SNE. Journal of
+Machine Learning Research, 9, 2579–2605.
+Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N.,
+Kaiser, L., & Polosukhin, I. (2017). Attention is all you need. In Advances in
+Neural Information Processing Systems 30.
