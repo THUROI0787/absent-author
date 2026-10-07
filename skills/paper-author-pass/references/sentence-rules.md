@@ -39,6 +39,14 @@ Do this **last**. Fix a trace only if (a) it obscures meaning, or (b) it is revi
 - ✗ "The gain is not merely a regularization effect, but a fundamental change in representation."
 - ✓ "The gain persists when we match regularization strength (Table 5), so it is not explained by regularization alone." (X kept because the paper tests it.)
 
+**Negation → positive statement** (beyond L02). A bare "not" makes the reader reconstruct the claim. State what holds.
+- ✗ "The bound does not depend on the isotropic model."  ✓ "The bound applies beyond the isotropic model."
+- Keep the negation when the negative is the finding ("X does not improve Y in any of our settings") or a logical statement ("Assumption 2 does not imply Assumption 3").
+
+**Comma-chained clauses** — when a sentence strings three or more clauses together with commas, or wraps a parenthetical in commas inside another clause, split it. One sentence, one step of the argument. Reviewers describe the effect as "it reads like one long subordinate clause".
+- ✗ "The estimator, which is unbiased under (A1), converges, as shown in Theorem 2, at rate O(1/n), which, in practice, is fast."
+- ✓ "Under (A1) the estimator is unbiased. Theorem 2 shows it converges at rate O(1/n), which is fast enough for the dataset sizes we use."
+
 **L06 stacked hedges** — one hedge naming its source.  ✗ "may potentially suggest"  ✓ "suggests, on the two datasets we tested,"
 
 **L07 hype** — delete evaluative adjectives the reader can't check (seamless, elegant, remarkable, unprecedented, paradigm shift, unlock). Replace "significant" outside statistics with the number.

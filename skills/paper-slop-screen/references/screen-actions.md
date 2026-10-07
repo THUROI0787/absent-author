@@ -27,7 +27,7 @@ Keyed to `evidence-catalog.md` (its "Grading" section is the authoritative gradi
 | S05 | Performative honesty | lint S05 + read | failures displayed without stated role in the argument; distinguish from genuine negative results | W (F4 with R01) |
 | S06 | Coined terms | lint S06 list + read | ≥1 coinage meeting ≥2 of the 5 catalog criteria (★★); ≥3 criteria or ≥3 such coinages (★★★); note those in the abstract | W |
 | S07 | Focus drift | read intro vs. body | motivation and actual contribution at different levels | Q |
-| S08 | Broken arc | read abstract/intro; cross-section numbers | abstract is a log dump, or sections contradict | W |
+| S08 | Broken arc | read abstract/intro; read the first sentence of each paragraph in one section; cross-section numbers | abstract is a log dump, sections contradict, or paragraph openings do not form an argument | W |
 | S09 | Related-work roster | read RW; check canonical works | roster only, or key canonical work missing/misrepresented | Q |
 | S10 | Repetition | read | substantial restatement across ≥3 sections | W |
 | S11 | Overreaching summaries | claim–evidence map for abstract/conclusion | any headline claim broader than its evidence | Q |

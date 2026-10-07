@@ -56,7 +56,7 @@ Do every subsection of `references/argument-pass.md`:
 - lab-notebook narration → argument order (S04);
 - performative honesty → argumentative use, or move it (S05);
 - **term table** for coined terms: keep+define / replace with standard term / delete (S06/L13);
-- focus drift and arc (S07/S08);
+- focus drift and arc (S07/S08), including the coherence pass: section openings that hand over from the previous section, paragraph endings that lead to the next, sentences linked by content rather than connectives;
 - related-work roster → comparison along named dimensions (S09); cross-section repetition (S10);
 - orphan formalism (S12); reviewer-Q&A headings and "This experiment tests Claim C2" (S13); appendix triage (S15);
 - post-hoc "deliberate tradeoff" → the real reason or an honest loss (S17).

@@ -45,6 +45,13 @@ Decisions: **keep + define at first use** (if it does real work and appears ≥3
 - Abstract = context → gap → what we did → evidence → strongest number, as prose, not a dump of results.
 - Every section should be referenced by the argument; numbers must be identical across sections (cross-check in Pass 3).
 
+**Coherence pass (S08).** The most common complaint from human co-authors about agent-written drafts is that sentences "each say their own thing" and sections do not hand over to one another. Fix it at three levels, in this order:
+1. **Section openings.** The first sentence of each section says what the previous sections established and what this section asks. ✗ "We now analyze the training dynamics." ✓ "Sections 4 and 5 showed that SG and InfoNCE share a minimizer and an unbiased estimator; away from the optimum, the two can prefer different representations, which this section examines."
+2. **Paragraph endings.** End a paragraph on the result that the next paragraph builds on, so the reader can predict why the next paragraph exists.
+3. **Sentence to sentence.** Link sentences through content: start a sentence with what the previous one ended on (given → new), or name the relation (because, so, which means). Connective words alone do not create coherence; a chain of "Moreover / Additionally" is L04, not a fix.
+
+Test: read only the first sentence of every paragraph in a section. If they do not form an argument, the section needs this pass. Do not add new claims to build bridges; if a bridge needs a fact the paper does not have, that is an AQ.
+
 ## 2.8 Related work: from roster to comparison (S09)
 - Group by the *dimension of difference* that matters for this paper (assumptions, supervision, cost, what is measured), not by "category" headings for their own sake.
 - Each group: what they share with us, where we differ, and why the difference matters — once, not "Unlike these works, we…" after every paragraph.

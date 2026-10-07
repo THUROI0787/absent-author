@@ -166,5 +166,43 @@ class TestFixtures(unittest.TestCase):
         self.assertEqual(seq, ["typical", "elevated", "high"])
 
 
+class TestReportedFalsePositives(unittest.TestCase):
+    """Regression tests for false positives reported on GitHub (issues #1-#3)."""
+
+    def _run(self, tex):
+        with tempfile.TemporaryDirectory() as d:
+            p = os.path.join(d, "t.tex")
+            with open(p, "w") as fh:
+                fh.write("\\documentclass{article}\\begin{document}\n" + tex + "\n\\end{document}\n")
+            return SL.analyze(p)["checks"]
+
+    def test_issue1_credit_roles(self):
+        c = self._run("\\section*{CRediT authorship contribution statement}\n"
+                      "Alice: Conceptualization; Writing -- original draft; Writing -- review and editing.\n"
+                      "Bob: Writing \u2013 review \\& editing.")
+        self.assertEqual(c["L01"]["count"], 0)
+        self.assertEqual(c["S03"]["count"], 0)
+        # real revision leakage and real dashes still fire
+        c = self._run("\\section{Method}\nThe original draft overstated the gain -- we fixed it.")
+        self.assertGreater(c["S03"]["count"], 0)
+        self.assertGreater(c["L01"]["count"], 0)
+
+    def test_issue2_label_inside_macro(self):
+        c = self._run("\\newcommand{\\paperfigure}[3]{\\begin{figure}\\caption{#2}\\label{#3}\\end{figure}}\n"
+                      "\\section{Results}\nSee Figure~\\ref{fig:es}.\n"
+                      "\\paperfigure{Figure_1.pdf}{Exposure gradient.}{fig:es}")
+        self.assertEqual(c["P02-todo"]["sub"]["undefined_ref_labels"], 0)
+        c = self._run("\\section{Results}\nSee Figure~\\ref{fig:missing}.")
+        self.assertEqual(c["P02-todo"]["sub"]["undefined_ref_labels"], 1)
+
+    def test_issue3_logical_non_implication(self):
+        c = self._run("\\section{Model}\nAssumption 2 is imposed at level $s_0$, and it does not imply "
+                      "its own analogue at neighboring levels.")
+        self.assertEqual(c["S01"]["count"], 0)
+        c = self._run("\\section{Discussion}\nOur results are strong. This does not imply that the method "
+                      "is optimal in every setting.")
+        self.assertGreater(c["S01"]["count"], 0)
+
+
 if __name__ == "__main__":
     unittest.main()

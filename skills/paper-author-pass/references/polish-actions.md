@@ -27,7 +27,7 @@ Keyed to `evidence-catalog.md` (English one-liners per ID: `evidence-index-en.md
 | S05 | Performative honesty | 2 | State what the failure rules out/bounds and place it there; remove ceremony; **never delete material negative results** |
 | S06 | Coined terms / codenames | 2 | Term table: keep+define / replace with standard / delete / unify; AQ if the author must define |
 | S07 | Focus drift | 1–2 | Re-motivate at the level of the real contribution, or restructure; AQ if story choice needed |
-| S08 | Broken arc / stitched feel | 2 | Rewrite abstract as prose arc; align numbers and cross-references |
+| S08 | Broken arc / stitched feel | 2 | Rewrite abstract as prose arc; coherence pass (section openings hand over, paragraph endings lead on, sentences linked by content); align numbers and cross-references |
 | S09 | Related-work roster | 2 | Group by dimension of difference; one positioning statement; add missing canonical work (AQ to verify) |
 | S10 | Cross-section repetition | 2 | Merge; keep only necessary abstract–conclusion echo |
 | S11 | Summary overreaches evidence | 1 | Claim–evidence map; narrow verbs/scope; report every narrowing |

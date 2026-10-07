@@ -36,7 +36,7 @@ import re
 import sys
 from typing import Dict, List, Optional, Tuple
 
-VERSION = "0.2.0"
+VERSION = "0.2.1"
 
 # ---------------------------------------------------------------------------
 # Calibration (written by tools/calibration/run_calibration.py --write-tool).
@@ -1297,6 +1297,20 @@ I = re.I
 # ----------------------------------------------------------------------------- L layer
 
 
+# CRediT contributor-role names ("Writing -- original draft", "Writing -- review & editing") are a
+# publisher-mandated taxonomy, not prose. Matches inside them are dropped by L01 and S03 (issue #1).
+CREDIT_ROLE_RX = re.compile(r"\bWriting\s*(?:\u2013|\u2014|---|--|-)\s*(?:original\s+draft|review\s*(?:&|\\&|and)\s*editing)",
+                            re.I)
+
+
+def _in_credit_role(text: str, m) -> bool:
+    return any(c.start() <= m.start() < c.end() for c in CREDIT_ROLE_RX.finditer(text))
+
+
+def _credit_skip(sub, para, m) -> bool:
+    return _in_credit_role(para.text, m)
+
+
 def check_L01(a: Analysis):
     r = a.new("L01", "Em dashes", "L01")
     pats = [
@@ -1305,7 +1319,7 @@ def check_L01(a: Analysis):
         ("spaced_double_hyphen", r"(?<=[A-Za-z,)\"'])\s+--\s+(?=[A-Za-z(\"'])", 0),
         ("spaced_en_dash", r"(?<=[A-Za-z,)])\s+\u2013\s+(?=[A-Za-z(])", 0),
     ]
-    a.scan(r, pats)
+    a.scan(r, pats, skip=_credit_skip)
 
 
 L02_PATTERNS = [
@@ -1633,6 +1647,23 @@ EXCLUDED_SECTION_RX = re.compile(r"limitation|related|prior work|background|ethi
                                  r"checklist|acknowledg|societal|reproducib", I)
 
 
+# "it does not imply" between mathematical objects is a precise, checkable statement in theory
+# writing, not a defensive hedge (issue #3).
+_MATH_SUBJECT_RX = re.compile(r"(?:\b(?:assumptions?|lemmas?|propositions?|theorems?|corollar(?:y|ies)|definitions?|"
+                              r"conditions?|propert(?:y|ies)|constraints?|inequalit(?:y|ies)|equations?|axioms?|"
+                              r"hypothes[ie]s|bounds?|claims?\s+\d)\b|\u27e6MATH\u27e7|\(\d+\)|"
+                              r"\b(?:Eq|Eqn|Thm|Lem|Prop|Cor|Def|Assump)\.)", re.I)
+
+
+def _s01_skip(sub, para, m) -> bool:
+    if sub != "this_does_not_mean" or not re.search(r"imply\b", m.group(0), re.I):
+        return False
+    text = para.text
+    starts = [o for o, _s in split_sentences(text)]
+    sent_start = max([o for o in starts if o <= m.start()] or [0])
+    return bool(_MATH_SUBJECT_RX.search(text[sent_start:m.start()]))
+
+
 def check_S01(a: Analysis):
     r = a.new("S01", "Defensive pre-emptive hedging", "S01")
     pats = [
@@ -1650,7 +1681,7 @@ def check_S01(a: Analysis):
         ("we_emphasize_that", r"\bwe\s+(?:emphasi[sz]e|stress|caution|reiterate)\s+that\b", I),
         ("to_be_clear", r"\bto\s+be\s+clear\b", I),
     ]
-    hits = a.scan(r, pats, weak=("we_do_not_address",), sections=True)
+    hits = a.scan(r, pats, weak=("we_do_not_address",), sections=True, skip=_s01_skip)
     hits = [h for h in hits if h[0] != "we_do_not_address"]
     # Anti-Autoresearch-style density rule on distinct sentences outside excluded sections
     sents = {}
@@ -1717,7 +1748,7 @@ def check_S03(a: Analysis):
         ("originally_reported", r"\b(?:we|that\s+we|which\s+we)\s+(?:had\s+)?originally\s+(?:reported|claimed|stated|"
                                 r"described)\b", I),
     ]
-    a.scan(r, pats, sections=True)
+    a.scan(r, pats, sections=True, skip=_credit_skip)
 
 
 def check_S04(a: Analysis):
@@ -1995,6 +2026,63 @@ def check_P02_meta(a: Analysis):
                       "that no one removed (e.g. 'PLEASE FILL IN CAPTION HERE').")
 
 
+def _brace_args(s: str, i: int, n: int):
+    """Read up to n balanced {...} arguments starting at s[i]; returns (args, end) or (None, i)."""
+    args = []
+    while len(args) < n:
+        while i < len(s) and s[i] in " \t\n%":
+            i += 1
+        if i < len(s) and s[i] == "[":  # optional argument
+            j = s.find("]", i)
+            if j < 0:
+                return None, i
+            i = j + 1
+            continue
+        if i >= len(s) or s[i] != "{":
+            return None, i
+        depth, j = 0, i
+        while j < len(s):
+            if s[j] == "{" and s[j - 1] != "\\":
+                depth += 1
+            elif s[j] == "}" and s[j - 1] != "\\":
+                depth -= 1
+                if depth == 0:
+                    break
+            j += 1
+        if j >= len(s):
+            return None, i
+        args.append(s[i + 1:j])
+        i = j + 1
+    return args, i
+
+
+def _macro_labels(body: str):
+    """Labels created inside user macros, e.g. \\newcommand{\\fig}[3]{...\\label{#3}} called as \\fig{a}{b}{fig:x}
+    (issue #2). Returns (labels, has_label_macros)."""
+    found, macros = set(), {}
+    for m in re.finditer(r"\\(?:re)?newcommand\*?\s*\{?\\([A-Za-z@]+)\}?\s*\[(\d)\](?:\[[^\]]*\])?\s*", body):
+        args, _ = _brace_args(body, m.end(), 1)
+        if args:
+            idx = re.findall(r"\\label\s*\{\s*#(\d)\s*\}", args[0])
+            if idx:
+                macros[m.group(1)] = (int(m.group(2)), [int(k) for k in idx])
+    for m in re.finditer(r"\\def\s*\\([A-Za-z@]+)((?:#\d)+)\s*", body):
+        args, _ = _brace_args(body, m.end(), 1)
+        if args:
+            idx = re.findall(r"\\label\s*\{\s*#(\d)\s*\}", args[0])
+            if idx:
+                macros[m.group(1)] = (m.group(2).count("#"), [int(k) for k in idx])
+    for name, (nargs, idx) in macros.items():
+        for c in re.finditer(r"\\" + re.escape(name) + r"(?![A-Za-z@])", body):
+            args, _ = _brace_args(body, c.end(), nargs)
+            if args:
+                for k in idx:
+                    if 1 <= k <= len(args):
+                        found.add(args[k - 1].strip())
+    has_any = bool(re.search(r"\\label\s*\{\s*#\d", body))
+    return found, has_any
+
+
 def check_P02_todo(a: Analysis):
     r = a.new("P02-todo", "TODO markers / unresolved references", "P02")
     a.scan(r, P02_TODO_PATS, skip=_p02_skip)
@@ -2003,6 +2091,8 @@ def check_P02_todo(a: Analysis):
     if d.kind == "tex":
         body = _strip_all_comments(d.raw)
         labels = set(re.findall(r"\\label\s*\{([^}]+)\}", body))
+        macro_labels, label_macros = _macro_labels(body)
+        labels |= macro_labels
         refs = re.findall(r"\\(?:ref|eqref|autoref|Autoref|cref|Cref|pageref|nameref|vref)\s*\{([^}]+)\}", body)
         missing = sorted({k.strip() for rr in refs for k in rr.split(",")
                           if k.strip() and "#" not in k and k.strip() not in labels})
@@ -2010,6 +2100,11 @@ def check_P02_todo(a: Analysis):
         bibkeys = {e["key"] for e in _bib_entries(d)}
         bibkeys |= _bbl_keys(d.raw) | d.bbl_keys
         missing_cites = sorted(k for k in cites if k not in bibkeys) if bibkeys else []
+        if missing and label_macros:
+            # a label macro we could not expand: report as info for the compile log, do not count
+            r["notes"].append("Some labels are set inside user macros; check the LaTeX log for undefined "
+                              "references before treating these as unresolved: " + ", ".join(missing[:10]))
+            missing = []
         r["sub"]["undefined_ref_labels"] = len(missing)
         r["sub"]["cite_keys_missing_from_bib"] = len(missing_cites)
         r["sub"]["todo_macro"] = d.counts.get("todo_macro", 0)

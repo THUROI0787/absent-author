@@ -172,4 +172,5 @@
 | 键 | 来源 | 要点 | 核实 |
 |---|---|---|---|
 | `[Internal-20261005-blindtest]` | 本项目 2026-10-05 的两次测试：审稿 skill 对 6 篇公开论文的盲测（结果与教训见 `skills/paper-slop-screen/references/worked-examples.md`），以及写作 skill 在 3 个场景上的作者把关测试（审计、修改、红队） | 数字取证（百分比×n 是否为整数、同一配置跨表一致）是命中率最高的检查；表层干净的 2026 年管线论文仍有严重的 R 层问题；写作 skill 的管线规则需要覆盖所有改动 | 内部测试，样本小（6 篇 + 3 个场景） |
+| `[Internal-20261007-coherence]` | 一位作者对另一篇由 agent 起草的论文做人工润色后的反馈（2026-10-07）：改动约 19 行，集中在章节承接、把否定句改成正面陈述、拆分逗号串起来的长从句 | "有几个部分每句话各说各的，没有啥 connection"；"每一个 section 如何承上启下"；"comma 用得太多了，读起来像是一直在说从句"。据此扩充了 S08 的典型表现，并在 `paper-author-pass` 中加入 coherence pass 和两条句子规则 | 内部观察，单篇论文 |
 | `[Internal-reviewing]` | 维护者自己的审稿经验 | R18、R20、R21、R22、P14、P16、S18 等条目的初始依据 | **U**：未核实，属于个人经验；有了匿名化 field report（`docs/field_reports/`）后逐条替换成 `[Internal-YYYYMMDD-缩写]` |

@@ -131,14 +131,14 @@ P12（隐藏提示注入）的强度标为 **⚑ 不端**：它是作者**在场
 
 | ID | 证据 | 典型表现 / 例句 | 强度 | 轴 | 误判提醒 | 来源 |
 |---|---|---|---|---|---|---|
-| S01 | **防御性写作（预先辩护）**（F1） | "We do not claim…"、"This is not to say…"、"Our goal is not X but Y" **不在 Limitations 里**，而是散在摘要、贡献、主题句中 | ★★（≥4 句、分布在 ≥2 节，并且出现在摘要或贡献里时 ★★★）校准✗（本语料罕见，无法区分） | W | 真正限定推论范围的一次性 caveat 必须保留；学术文化不同，对冲习惯也不同（铁律 4）。阈值一旦公开就很容易被刷，只能用作写作提示 | `[XHS-origin]` `[AA]` `[KD]` `[LB]` `[HERO]` `[Zhehao-EBW]` |
+| S01 | **防御性写作（预先辩护）**（F1） | "We do not claim…"、"This is not to say…"、"Our goal is not X but Y" **不在 Limitations 里**，而是散在摘要、贡献、主题句中 | ★★（≥4 句、分布在 ≥2 节，并且出现在摘要或贡献里时 ★★★）校准✗（本语料罕见，无法区分） | W | 真正限定推论范围的一次性 caveat 必须保留；学术文化不同，对冲习惯也不同（铁律 4）。理论论文中"Assumption 2 does not imply …"是逻辑陈述，不是对冲（误判登记 FP-003）。阈值一旦公开就很容易被刷，只能用作写作提示 | `[XHS-origin]` `[AA]` `[KD]` `[LB]` `[HERO]` `[Zhehao-EBW]` |
 | S02 | **"忏悔书"式 caveat 弥散**（F1） | "should be interpreted with caution"、"further research is needed" 出现在每一节；caveat 恰好落在审稿人会攻击的那个点上；Limitations 在摘要、引言、结论里被重复 | ★★（和 S03 同时出现时 ★★★）校准✗（本语料不区分） | R（review-loop 指纹） | 机制很清楚：每一轮审稿意见都被吸收成当场的一句 hedge。但校准语料里没有 review-loop 产出的论文，还没有真实样本可以校准 | `[ARIS-PR423]` `[HERO]` `[AIRev26]` |
-| S03 | **回应不存在的审稿意见 / 修订叙事泄漏** | 初投稿里写着 "In response to concerns about…"、"we have now added…"、"in this revision"、"earlier versions described…" | ★★★ 校准✗（本语料罕见，无法区分） | R | rebuttal 版本中标注修改是正常的。弱形式（"This paper does not consider X"）人类也常这样预先说明，只算 ★ | `[ARIS-PR423]` `[HERO]`（规则 7） |
+| S03 | **回应不存在的审稿意见 / 修订叙事泄漏** | 初投稿里写着 "In response to concerns about…"、"we have now added…"、"in this revision"、"earlier versions described…" | ★★★ 校准✗（本语料罕见，无法区分） | R | rebuttal 版本中标注修改是正常的。CRediT 角色名（"Writing – original draft"）不是修订叙事泄漏（FP-001）。弱形式（"This paper does not consider X"）人类也常这样预先说明，只算 ★ | `[ARIS-PR423]` `[HERO]`（规则 7） |
 | S04 | **实验日志式叙事** | 结果按做实验的时间顺序排列："We first tried…, which failed; we then…"；中途的报错和被放弃的方案写进正文 | ★★ 校准✗（本语料不区分） | W | 系统和工程论文的迭代叙事是正常的（降为 ★）；也是学生常见写法（铁律 4） | `[HERO]` `[humanize-paper]` `[LB]` |
 | S05 | **表演性"诚实披露"**（与 R01 同时出现时并入 F4） | 失败的实验被醒目地摆出来，却不说明它和主结论的关系；"In the spirit of full transparency, we report…"；负面结果像赔罪一样逐条列出 | ★★ 校准✗（本语料罕见，无法区分） | W | **真实的负面结果是好科学，绝不能删**。要看失败是在**推进论证**（排除某种解释、界定适用范围），还是在**展示态度**。在负面结果论文里不计入 | `[XHS-origin]` `[Cook-TC25]` `[ARIS-review-loop]` `[AIRev26]`（AI 审稿人会把"承认局限"当成"解决了局限"） |
 | S06 | **生造词：把未被接受的新词当作既定术语** | 首次出现无定义；替换成现有术语后论证无损失（替换测试）。判定标准见表下注 | ★★（满足 ≥3 条标准，或同一篇里有 ≥3 个这样的词时 ★★★）校准✗（本语料不区分） | W | 正当的新概念会被列为贡献、有形式定义、有和旧概念的对比。**缩写多不是证据**：校准显示人类论文定义的缩写反而更多 | `[XHS-origin]` `[AA]` `[36kr-ICLR26]` `[HN-SkyPuncher]` `[ZH-Reddit-1wpvs22]` |
 | S07 | **焦点漂移到细枝末节**（见 R03） | 引言讲宏大的动机，正文却在讨论一个实现细节或一个超参数 | ★★ | Q | 小而精的论文没有问题，前提是动机本身就在这个层面 | `[AA]` `[XHS-origin]` |
-| S08 | **叙事断裂、拼接感** | 摘要像结果的 dump；引言只有一两段；章节之间互不引用；核心概念始终没有说清 | ★★ | W | 多人合写也会造成风格不一致 | `[AA]` `[SciSlop26]` `[Wiley-FAQ]` `[DailyNous25]` |
+| S08 | **叙事断裂、拼接感** | 摘要像结果的 dump；引言只有一两段；章节之间互不引用，或开头不交代上一节确立了什么；段落内每句各说各的，和上一句没有衔接；核心概念始终没有说清 | ★★ | W | 多人合写也会造成风格不一致 | `[AA]` `[SciSlop26]` `[Wiley-FAQ]` `[DailyNous25]` `[Internal-20261007-coherence]` |
 | S09 | **Related work 名单化 / 失准** | "A does X. B does Y."，每段结尾都是 "Unlike these, we…"；漏掉最相关的经典工作；把被引论文说歪 | ★★ | Q | 某些领域习惯逐篇介绍；也是新手常见写法 | `[Buschek25]` `[ZH-Reddit-1t7o1ob]` `[SciSlop26]` `[ARIS-paper-write]` |
 | S10 | **章节之间复读**（F3） | 摘要、引言、讨论、结论换着词讲同一件事 | ★ | W | 摘要和结论之间必要的呼应不算 | `[SciSlop26]` `[AISTATS27]` |
 | S11 | **结果总结越过证据** | "demonstrates""generalizes""robust" 背后只有一个数据集、一个 seed | ★★ | Q | 质量问题，有没有用 AI 都会犯 | `[Buschek25]` `[Hadan24]` `[OR]` `[AA]` |
