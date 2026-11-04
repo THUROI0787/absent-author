@@ -8,12 +8,20 @@
   <a href="#two-skills"><img src="https://img.shields.io/badge/skills-Claude_Code_%C2%B7_Codex-2747C7?style=flat" alt="Skills for Claude Code and Codex"></a>
   <a href="tools/calibration/calibration_report.md"><img src="https://img.shields.io/badge/lint-calibrated_on_79_papers-2F8F6B?style=flat" alt="Calibrated lint"></a>
   <a href="https://doi.org/10.5281/zenodo.23165721"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.23165721.svg" alt="DOI"></a>
+  <a href="https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep#absent-author"><img src="https://img.shields.io/badge/featured_in-ARIS_(18k%E2%98%85)-B7791F?style=flat" alt="Featured in ARIS"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-5B6675?style=flat" alt="MIT license"></a>
 </p>
 
 <p align="center"><b>Ruoyu Zhao</b><sup>1,*,†</sup> · <b>Zhehao Zou</b><sup>2,*</sup> · <b>Jinheng Zhang</b><sup>3</sup> · <b>Yuting Chen</b><sup>4</sup> · <b>Jiaqi Wu</b><sup>1</sup> · <b>Chenyu Zhu</b><sup>1</sup><br><sup>1</sup>City University of Hong Kong · <sup>2</sup>The Chinese University of Hong Kong · <sup>3</sup>University of Pennsylvania · <sup>4</sup>Georgia Institute of Technology<br><sub>* Equal contribution · † Project lead</sub></p>
 
 <p align="center"><b>English</b> · <a href="README_CN.md">中文</a> · <a href="README_JA.md">日本語</a> · <a href="https://THUROI0787.github.io/absent-author/">Website</a></p>
+
+## 🔥 News
+
+- **2026-11-04** 🎉 **Featured by [ARIS (Auto-Research-In-Sleep)](https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep)** (18k+ ★): Absent Author is now in ARIS's News and community projects, with a [full introduction](https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep#absent-author) ([PR #493](https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep/pull/493)). Thank you, ARIS team!
+- **2026-10-07** **v0.5.0**: field-tested on real papers. New tools for full author-list reference checks, number consistency and hidden prompt injections (venue canaries are no longer mistaken for author misconduct). See the [changelog](CHANGELOG.md).
+- **2026-10-05** **v0.4.0** released and archived on Zenodo ([DOI 10.5281/zenodo.23165721](https://doi.org/10.5281/zenodo.23165721)).
+
 
 Reviewers now see papers that an agent produced end to end, with no human who steered, checked or owns them. This repository names the signs of that absence, with sources, and provides tools that turn them into evidence a reviewer can cite and an author can fix.
 

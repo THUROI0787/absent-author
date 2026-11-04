@@ -8,12 +8,20 @@
   <a href="#两个-skill"><img src="https://img.shields.io/badge/skills-Claude_Code_%C2%B7_Codex-2747C7?style=flat" alt="skills"></a>
   <a href="tools/calibration/calibration_report.md"><img src="https://img.shields.io/badge/lint-79_篇论文校准-2F8F6B?style=flat" alt="校准过的 lint"></a>
   <a href="https://doi.org/10.5281/zenodo.23165721"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.23165721.svg" alt="DOI"></a>
+  <a href="https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep#absent-author"><img src="https://img.shields.io/badge/featured_in-ARIS_(18k%E2%98%85)-B7791F?style=flat" alt="Featured in ARIS"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-5B6675?style=flat" alt="MIT"></a>
 </p>
 
 <p align="center"><b>Ruoyu Zhao</b><sup>1,*,†</sup> · <b>Zhehao Zou</b><sup>2,*</sup> · <b>Jinheng Zhang</b><sup>3</sup> · <b>Yuting Chen</b><sup>4</sup> · <b>Jiaqi Wu</b><sup>1</sup> · <b>Chenyu Zhu</b><sup>1</sup><br><sup>1</sup>City University of Hong Kong · <sup>2</sup>The Chinese University of Hong Kong · <sup>3</sup>University of Pennsylvania · <sup>4</sup>Georgia Institute of Technology<br><sub>* 共同一作 · † 项目负责人</sub></p>
 
 <p align="center"><a href="README.md">English</a> · <b>中文</b> · <a href="README_JA.md">日本語</a> · <a href="https://THUROI0787.github.io/absent-author/">网站</a></p>
+
+## 🔥 动态
+
+- **2026-11-04** 🎉 **被 [ARIS（Auto-Research-In-Sleep）](https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep) 收录推荐**（18k+ ★）：Absent Author 进入了 ARIS 的 News 和社区项目列表，并附有[完整介绍](https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep#absent-author)（[PR #493](https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep/pull/493)）。感谢 ARIS 团队！
+- **2026-10-07** **v0.5.0**：在真实论文上实测迭代。新增三个工具：逐个比对完整作者列表的参考文献核查、数字一致性检查、隐藏提示注入检测（不再把会议 canary 误判为作者不端）。详见[更新日志](CHANGELOG.md)。
+- **2026-10-05** **v0.4.0** 发布，并在 Zenodo 存档（[DOI 10.5281/zenodo.23165721](https://doi.org/10.5281/zenodo.23165721)）。
+
 
 审稿人现在常常读到这样的论文：由 agent 从头到尾产出，却没有人类引导、核查或为之负责。这个仓库为这种"作者缺席"提供一套有来源的共同语言，并把它变成审稿人能引用、作者能修改的证据。
 

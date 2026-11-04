@@ -15,6 +15,7 @@
 
   /* ---------------- i18n ---------------- */
   const ZH = {
+    news1: "被 ARIS（Auto-Research-In-Sleep，18k★）收录推荐 · 2026 年 11 月",
     nav_why: "为什么", nav_quad: "四象限", nav_ev: "证据", nav_skills: "Skills", nav_cal: "校准", nav_vision: "愿景",
     h1a: "<span class=\"nb\">科研和写作</span><span class=\"nb\">可以自动化，</span>", h1b: "署名的责任不能。",
     lede: "审稿人现在常常读到这样的论文：由 agent 从头到尾产出，却没有人类引导、核查或为之负责。Absent Author 是一份证据清单、两个 agent skill 和一个 lint，让这种“作者缺席”变得可见：每条判断都给出位置和原文，不输出“AI 概率”。",
@@ -94,6 +95,7 @@
     vc3: "只有经人亲自核实的 ☠ 级证据，才能把举证责任转给作者。", vc4: "误判公开登记，并据此修改清单。",
   };
   const JA = {
+    news1: "ARIS（Auto-Research-In-Sleep、18k★）で紹介されました · 2026 年 11 月",
     nav_why: "背景", nav_quad: "4 象限", nav_ev: "証拠", nav_skills: "スキル", nav_cal: "較正", nav_vision: "展望",
     h1a: "<span class=\"nb\">研究も執筆も、</span><span class=\"nb\">自動化できる。</span>", h1b: "<span class=\"nb\">著者の責任は、</span><span class=\"nb\">自動化できない。</span>",
     lede: "いま査読者のもとには、エージェントが最初から最後まで作り上げ、誰も方向づけず、確認もせず、責任も負っていない論文が届いています。Absent Author は、その「著者の不在」を見えるようにするための証拠リスト、2つのエージェント用スキル、そして lint です。判断にはすべて該当箇所と原文を添え、「AI 確率」は出しません。",

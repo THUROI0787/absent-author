@@ -7,12 +7,20 @@
   <a href="EVIDENCE.md"><img src="https://img.shields.io/badge/evidence-83_items-1D2430?style=flat" alt="83 項目の証拠"></a>
   <a href="#2つのスキル"><img src="https://img.shields.io/badge/skills-Claude_Code_%C2%B7_Codex-2747C7?style=flat" alt="スキル"></a>
   <a href="https://doi.org/10.5281/zenodo.23165721"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.23165721.svg" alt="DOI"></a>
+  <a href="https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep#absent-author"><img src="https://img.shields.io/badge/featured_in-ARIS_(18k%E2%98%85)-B7791F?style=flat" alt="Featured in ARIS"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-5B6675?style=flat" alt="MIT"></a>
 </p>
 
 <p align="center"><b>Ruoyu Zhao</b><sup>1,*,†</sup> · <b>Zhehao Zou</b><sup>2,*</sup> · <b>Jinheng Zhang</b><sup>3</sup> · <b>Yuting Chen</b><sup>4</sup> · <b>Jiaqi Wu</b><sup>1</sup> · <b>Chenyu Zhu</b><sup>1</sup><br><sup>1</sup>City University of Hong Kong · <sup>2</sup>The Chinese University of Hong Kong · <sup>3</sup>University of Pennsylvania · <sup>4</sup>Georgia Institute of Technology<br><sub>* 同等貢献 · † プロジェクトリーダー</sub></p>
 
 <p align="center"><a href="README.md">English</a> · <a href="README_CN.md">中文</a> · <b>日本語</b> · <a href="https://THUROI0787.github.io/absent-author/?lang=ja">ウェブサイト</a></p>
+
+## 🔥 ニュース
+
+- **2026-11-04** 🎉 **[ARIS（Auto-Research-In-Sleep）](https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep) で紹介されました**（18k+ ★）：ARIS の News とコミュニティプロジェクト一覧に、[詳しい紹介](https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep#absent-author)とともに掲載されています（[PR #493](https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep/pull/493)）。ARIS チームに感謝します。
+- **2026-10-07** **v0.5.0**：実際の論文での試用をもとに改良。参考文献の著者リスト全体の照合、数値の一貫性チェック、隠しプロンプト注入の検出を追加しました（学会の canary を著者の不正と誤判定しなくなりました）。詳細は [CHANGELOG](CHANGELOG.md)。
+- **2026-10-05** **v0.4.0** を公開し、Zenodo にアーカイブ（[DOI 10.5281/zenodo.23165721](https://doi.org/10.5281/zenodo.23165721)）。
+
 
 > この日本語版は [README.md](README.md) の概要です。食い違いがある場合は README.md が優先されます。証拠リスト（英語 [`EVIDENCE.md`](EVIDENCE.md)、中国語の原本 [`EVIDENCE_CN.md`](EVIDENCE_CN.md)。両者が異なる場合は中国語版が優先）、スキル本体、詳しい説明（[`docs/POSITIONING.md`](docs/POSITIONING.md)）は英語と中国語で提供しています。
 
