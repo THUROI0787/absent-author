@@ -4,7 +4,7 @@ on:
   pull_request:
 jobs:
   checks:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04  # ubuntu-latest (26.04) has no Python 3.9 build; 3.9 is our minimum
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
